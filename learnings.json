@@ -813,6 +813,13 @@
       "summary": "The in-app browser (/api/browser/*) is one shared webview; the session parameter is ignored and parallel agents navigate it out from under each other. When several agents screenshot in parallel, assert location.href in the same eval that scrolls, re-check href right before and after GET /api/browser/screenshot, verify the PNG dimensions (another agent may have device emulation on, producing 1280x1600 captures), and retry with short random backoff instead of long fixed waits.",
       "detail": null,
       "addedAt": "2026-09-11"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "unsplash.com/napi/search/photos answers curl.exe with 200 (JSON incl. premium/plus flags) but returns 401 to Python urllib regardless of User-Agent; shell out to curl via subprocess for that endpoint. Commons API imageinfo urls carry a ?utm query string, so strip before extension checks.",
+      "detail": null,
+      "addedAt": "2026-09-11"
     }
   ]
 }

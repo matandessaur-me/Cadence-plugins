@@ -820,6 +820,20 @@
       "summary": "unsplash.com/napi/search/photos answers curl.exe with 200 (JSON incl. premium/plus flags) but returns 401 to Python urllib regardless of User-Agent; shell out to curl via subprocess for that endpoint. Commons API imageinfo urls carry a ?utm query string, so strip before extension checks.",
       "detail": null,
       "addedAt": "2026-09-11"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "GET /api/browser/screenshot under POST /api/browser/emulate/device returns an image of the emulated size (e.g. 780x1688 at 390x844 dpr2) but only the real webview area (about 390x485, or 625x475 at 768) is captured and it is tiled to fill the rest. Crop to the top ~485 CSS px, scroll in 480px steps, and rely on DOM measurements (scrollWidth, getBoundingClientRect, naturalWidth) for anything below the fold or wider than 625px.",
+      "detail": null,
+      "addedAt": "2026-09-11"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A reveal/fade-in wrapper that leaves transform, filter or will-change on the section after animating (forwards fill) becomes the containing block for any position: fixed child, so a fixed bottom bar renders inside the section thousands of px down. Remove those properties once the animation ends (animationend -> is-done class).",
+      "detail": null,
+      "addedAt": "2026-09-11"
     }
   ]
 }

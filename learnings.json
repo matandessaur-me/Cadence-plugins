@@ -841,6 +841,13 @@
       "summary": "Netlify Next plugin fails with Failed publishing static content on Windows when a dev server runs in the same folder",
       "detail": "The plugin renames .next during onPostBuild; an open dev server holds the folder. Deploy from a detached git worktree with its own npm ci, or stop the dev server first.",
       "addedAt": "2026-09-11"
+    },
+    {
+      "category": "platform",
+      "cli": null,
+      "summary": "verify.mjs (next build + next start) ran while next dev was up on the same site: the build served stale pages (missing h1, missing hreflang) and the checks failed for no real reason. verify.mjs now refuses when the registry dev port answers; always stop the dev server before a verify or deploy.",
+      "detail": null,
+      "addedAt": "2026-09-11"
     }
   ]
 }

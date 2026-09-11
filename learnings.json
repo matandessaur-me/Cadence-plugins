@@ -834,6 +834,13 @@
       "summary": "A reveal/fade-in wrapper that leaves transform, filter or will-change on the section after animating (forwards fill) becomes the containing block for any position: fixed child, so a fixed bottom bar renders inside the section thousands of px down. Remove those properties once the animation ends (animationend -> is-done class).",
       "detail": null,
       "addedAt": "2026-09-11"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "Netlify Next plugin fails with Failed publishing static content on Windows when a dev server runs in the same folder",
+      "detail": "The plugin renames .next during onPostBuild; an open dev server holds the folder. Deploy from a detached git worktree with its own npm ci, or stop the dev server first.",
+      "addedAt": "2026-09-11"
     }
   ]
 }

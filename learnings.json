@@ -883,6 +883,13 @@
       "summary": "MapLibre GL 6.9 never requests tiles inside the Next 16 app (style loads, sources never load, no errors); maplibre-gl@5 works with the globe projection. Also: create the map in an effect with [] deps and read callbacks through refs, or a parent re-render rebuilds the map and drops the markers.",
       "detail": null,
       "addedAt": "2026-09-12"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "In-app browser screenshots tile when the emulated device is larger than the window; use {reset:true} for desktop checks and rely on DOM measurements for widths the window cannot show.",
+      "detail": "POST /api/browser/emulate/device {width:1440} then GET /api/browser/screenshot returned the viewport repeated in a grid. Native viewport (1024x700 after reset) screenshots are clean; phone widths (390) also tile vertically but the first tile is usable.",
+      "addedAt": "2026-09-12"
     }
   ]
 }

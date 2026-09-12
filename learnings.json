@@ -862,6 +862,20 @@
       "summary": "A Sanity site page must not use the slug studio: /studio is the Sanity studio route and the page is shadowed. Use /about (or another slug) and keep the menu label.",
       "detail": null,
       "addedAt": "2026-09-12"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "When writing French copy under a plain-ASCII rule, keep the apostrophe elisions (l apostrophe, d apostrophe, qu apostrophe): dropping diacritics is acceptable, dropping apostrophes reads as broken French. Instruct content workers explicitly.",
+      "detail": null,
+      "addedAt": "2026-09-12"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "Netlify site names are global: createSite answers 422 Unprocessable Entity when a name is taken. Pick a more specific name in the brief rather than assuming the slug is free.",
+      "detail": null,
+      "addedAt": "2026-09-12"
     }
   ]
 }

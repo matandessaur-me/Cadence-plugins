@@ -890,6 +890,13 @@
       "summary": "In-app browser screenshots tile when the emulated device is larger than the window; use {reset:true} for desktop checks and rely on DOM measurements for widths the window cannot show.",
       "detail": "POST /api/browser/emulate/device {width:1440} then GET /api/browser/screenshot returned the viewport repeated in a grid. Native viewport (1024x700 after reset) screenshots are clean; phone widths (390) also tile vertically but the first tile is usable.",
       "addedAt": "2026-09-12"
+    },
+    {
+      "category": "shell",
+      "cli": "claude",
+      "summary": "Git Bash rewrites an argument that starts with / as a Windows path (MSYS path conversion): --pages /,/company became C:/Program Files/Git/,/company. Prefix the command with MSYS_NO_PATHCONV=1 when passing URL paths.",
+      "detail": null,
+      "addedAt": "2026-09-12"
     }
   ]
 }

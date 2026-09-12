@@ -897,6 +897,13 @@
       "summary": "Git Bash rewrites an argument that starts with / as a Windows path (MSYS path conversion): --pages /,/company became C:/Program Files/Git/,/company. Prefix the command with MSYS_NO_PATHCONV=1 when passing URL paths.",
       "detail": null,
       "addedAt": "2026-09-12"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "Next 16 keeps a persisted data cache in .next/cache/fetch-cache across rebuilds: after reseeding Sanity, a rebuild still serves the old documents. Delete .next/cache/fetch-cache (or the whole .next/cache) before verify.mjs or a deploy build when the dataset changed.",
+      "detail": "Seen on a SiteForge site: seed-content wrote new meta descriptions, verify.mjs rebuilt, the production server still returned the previous descriptions (curl confirmed). Removing .next/cache/fetch-cache fixed it.",
+      "addedAt": "2026-09-12"
     }
   ]
 }

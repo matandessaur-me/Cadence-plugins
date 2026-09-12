@@ -876,6 +876,13 @@
       "summary": "Netlify site names are global: createSite answers 422 Unprocessable Entity when a name is taken. Pick a more specific name in the brief rather than assuming the slug is free.",
       "detail": null,
       "addedAt": "2026-09-12"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "MapLibre GL 6.9 never requests tiles inside the Next 16 app (style loads, sources never load, no errors); maplibre-gl@5 works with the globe projection. Also: create the map in an effect with [] deps and read callbacks through refs, or a parent re-render rebuilds the map and drops the markers.",
+      "detail": null,
+      "addedAt": "2026-09-12"
     }
   ]
 }

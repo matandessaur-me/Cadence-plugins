@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-12",
+  "updated": "2026-09-13",
   "learnings": [
     {
       "category": "cli-flags",
@@ -904,6 +904,20 @@
       "summary": "Next 16 keeps a persisted data cache in .next/cache/fetch-cache across rebuilds: after reseeding Sanity, a rebuild still serves the old documents. Delete .next/cache/fetch-cache (or the whole .next/cache) before verify.mjs or a deploy build when the dataset changed.",
       "detail": "Seen on a SiteForge site: seed-content wrote new meta descriptions, verify.mjs rebuilt, the production server still returned the previous descriptions (curl confirmed). Removing .next/cache/fetch-cache fixed it.",
       "addedAt": "2026-09-12"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "A shell opened by the installed Symphonee app inherits SYMPHONEE_WEB_DIST, SYMPHONEE_PRODUCT_ROOT and SYMPHONEE_HOST_KIND pointing at the installed copy; a scratch server started from the source tree (scripts/test-server.mjs) then serves the INSTALLED renderer and a rebuilt apps/web/dist never shows. Unset those three (env -u ...) before starting a dev server from source.",
+      "detail": "Symptom: the served index.html bundle hash differs from apps/web/dist/index.html and a fresh build is not visible. Also: scripts/test-server.mjs deletes its temp data dir when killed, so anything installed under it (an Artemis checkout, for one) goes with it - point ARTEMIS_HOME elsewhere for repeat runs.",
+      "addedAt": "2026-09-13"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "In-app browser calls without x-symphonee-actor land on the SHARED webview other agents are driving (a screenshot came back showing another agent's page). Always send x-symphonee-actor: $SYMPHONEE_ACTOR on /api/browser/* so you get your own tab.",
+      "detail": null,
+      "addedAt": "2026-09-13"
     }
   ]
 }

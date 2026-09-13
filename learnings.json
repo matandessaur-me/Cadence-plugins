@@ -946,6 +946,27 @@
       "summary": "A change was reverted: the sidebar New Shell button opens a shell, and a failure to open one shows a toast instead of nothing",
       "detail": "Claimed by claude on 2026-09-10 (api.ts, store.ts). Checked 2026-09-13: apps/web/src/lib/api.ts no longer exists.",
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "SiteForge content: a link to an outside address is kind 'url' with a 'url' field, a phone link is kind 'phone'; writing kind 'external' with 'href' hydrates to an empty href and the button disappears without an error",
+      "detail": null,
+      "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "SiteForge: legacyUrls in brief.json are documentation only; redirects need redirect documents seeded (content/redirects.json) or old addresses return 404 on the live site",
+      "detail": null,
+      "addedAt": "2026-09-13"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "Netlify free plan: POST /accounts/{id}/env refuses the scopes key (403 Upgrade your account); send {key, values:[{value, context:'all'}]} only",
+      "detail": null,
+      "addedAt": "2026-09-13"
     }
   ]
 }

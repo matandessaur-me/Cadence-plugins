@@ -932,6 +932,13 @@
       "summary": "A position: fixed element inside a header that uses backdrop-filter is positioned relative to the header, not the viewport (backdrop-filter creates a containing block); render fixed menus and bars as siblings of the header",
       "detail": null,
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "Sanity hooks API v2021-10-04: a GROQ document webhook needs type: document and includeAllVersions and refuses isDisabled; the 400 names the offending key, so read validation.keys instead of guessing shapes",
+      "detail": null,
+      "addedAt": "2026-09-13"
     }
   ]
 }

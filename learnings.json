@@ -1009,6 +1009,13 @@
       "summary": "In the Symphonee workbench, position:fixed does NOT resolve against the viewport: .wb__view carries animation: view-in ... both, which leaves an identity transform on the element forever, and a transformed ancestor becomes the containing block for every fixed child. A panel placed at computed viewport coordinates landed hundreds of pixels off. Render floating panels through createPortal(document.body), or measure relative to the containing block.",
       "detail": "Also: a toolbar with align-items: stretch makes an inline-flex wrapper take the full row height, so a shorter chip inside it sits at the TOP of the row rather than on the icons' centre line - set align-items: center on the wrapper. Both were found by measuring getBoundingClientRect in the in-app browser rather than by looking at a screenshot.",
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "An integration that needs a model key must take it from Symphonee Settings (config AiApiKeys), never from a second .env inside the data dir. Artemis shipped reading only its own .env and every run died in the planner on auth while the UI showed 'pending' forever. Also: a status field like 'configured' must mean the thing is usable (a key is reachable), not that a file exists.",
+      "detail": "Google's planner reads GOOGLE_API_KEY while Settings and Gemini's docs say GEMINI_API_KEY: map one to the other rather than asking for the key twice. And surface the daemon's own readiness probe before the action, not silence after it.",
+      "addedAt": "2026-09-13"
     }
   ]
 }

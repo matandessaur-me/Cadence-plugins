@@ -918,6 +918,13 @@
       "summary": "In-app browser calls without x-symphonee-actor land on the SHARED webview other agents are driving (a screenshot came back showing another agent's page). Always send x-symphonee-actor: $SYMPHONEE_ACTOR on /api/browser/* so you get your own tab.",
       "detail": null,
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "In-app browser screenshots tile (the page repeats in a grid) when the emulated device width exceeds the browser pane at 2x; emulate tablets with deviceScaleFactor 1 (768x700) for a single clean frame",
+      "detail": null,
+      "addedAt": "2026-09-13"
     }
   ]
 }

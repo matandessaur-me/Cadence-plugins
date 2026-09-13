@@ -1023,6 +1023,13 @@
       "summary": "A long-lived helper daemon (Artemis on 127.0.0.1:8000) survives a Symphonee upgrade and keeps the OLD build's environment, so a key added in Settings appears to have no effect: the new server finds the port reachable and never respawns it. Stop the daemon and Start it again after an upgrade or a settings change, and treat 'unmanaged and running' as a reason to restart rather than to reuse.",
       "detail": null,
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "In the Symphonee workbench every view is rendered with key={view}, so switching views REMOUNTS the stage and any state a component held is lost - that is why a tab 'resets' when you step into a shell and come back. State that should survive belongs in the store, keyed by whatever it describes (a device serial, a repo), not in the component.",
+      "detail": "Also: a checklist step must never be derived from transient state. 'terminals.length > 0' un-completes when shells close, so a getting-started chip reappeared on every launch. Latch a step once it has ever been true.",
+      "addedAt": "2026-09-13"
     }
   ]
 }

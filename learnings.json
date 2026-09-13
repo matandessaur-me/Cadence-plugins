@@ -1037,6 +1037,13 @@
       "summary": "save-note.js fails with EINVAL on Windows when the title contains a colon: the title becomes the filename and rename() rejects it. Use a dash.",
       "detail": null,
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "Learnings are semantically invisible to Mind retrieval: extractors/learnings.js emits every learning as kind concept, which is excluded from RECALL_KINDS (recall.js: memory, conversation, drawer) and from the dense embedding scope (eval/dense.js DEFAULT_KINDS), so 153 learning nodes are reachable only by BM25 lexical overlap against 3647 other concept nodes. Measured recall@5 for symptom-shaped questions: 12.8 percent. The 85KB of learnings shipped in every bootstrap has been masking this - slim the payload without fixing the kind and Symphonee goes blind to its own mistakes.",
+      "detail": "Found by packages/core/cjs/eval/awareness.js against gold/bootstrap-awareness.json. Fix: give learnings their own kind, add it to RECALL_KINDS and the dense kind scope, rebuild embeddings, re-run the eval before shipping any bootstrap diet.",
+      "addedAt": "2026-09-13"
     }
   ]
 }

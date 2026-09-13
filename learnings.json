@@ -925,6 +925,13 @@
       "summary": "In-app browser screenshots tile (the page repeats in a grid) when the emulated device width exceeds the browser pane at 2x; emulate tablets with deviceScaleFactor 1 (768x700) for a single clean frame",
       "detail": null,
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A position: fixed element inside a header that uses backdrop-filter is positioned relative to the header, not the viewport (backdrop-filter creates a containing block); render fixed menus and bars as siblings of the header",
+      "detail": null,
+      "addedAt": "2026-09-13"
     }
   ]
 }

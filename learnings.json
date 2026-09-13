@@ -988,6 +988,20 @@
       "summary": "SiteForge harvest-site.mjs now writes the full catalog and profile shape the validator wants (sourceSite, sourcePath, files, category, screenshot, dependencies, interactions, brand, palette, typography, studio, deploy); only purposes remain to write by hand, one line per new pattern",
       "detail": null,
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "maplibre-gl 5+ and 6 ship ESM-only with a separate worker module; inside a Next bundle the canvas mounts but never renders (no render or load event). Pin maplibre-gl 4.7.1 (single-file build with the worker inlined), which renders on OpenFreeMap tiles.",
+      "detail": "Symptom: .maplibregl-canvas present, data-ready never set, no error event. The CDN has no dist/maplibre-gl.js for 6.x, only .mjs plus maplibre-gl-worker.mjs. Fix: npm i maplibre-gl@4.7.1 --save-exact; the dynamic import shape (mod.default || mod) works for both.",
+      "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A fixed bottom bar (position fixed, bottom 0) shows a 1px line of page under it on some browsers because the viewport height is fractional. bottom:-1px does not cure it; paint the bar colour past the edge with a ::after (top:100%, height 3rem, background inherit) on the element that carries the colour.",
+      "detail": null,
+      "addedAt": "2026-09-13"
     }
   ]
 }

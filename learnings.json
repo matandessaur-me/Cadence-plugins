@@ -967,6 +967,13 @@
       "summary": "Netlify free plan: POST /accounts/{id}/env refuses the scopes key (403 Upgrade your account); send {key, values:[{value, context:'all'}]} only",
       "detail": null,
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "The Symphonee in-app browser does not render MapLibre GL: a map reaches styledata but never fires render or load, even for a stock CDN build in a fixed div (WebGL context is present). Do not debug map rendering there; verify maps in the user browser and check that the style URL and workers are reachable instead",
+      "detail": null,
+      "addedAt": "2026-09-13"
     }
   ]
 }

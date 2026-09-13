@@ -939,6 +939,13 @@
       "summary": "Sanity hooks API v2021-10-04: a GROQ document webhook needs type: document and includeAllVersions and refuses isDisabled; the 400 names the offending key, so read validation.keys instead of guessing shapes",
       "detail": null,
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change was reverted: the sidebar New Shell button opens a shell, and a failure to open one shows a toast instead of nothing",
+      "detail": "Claimed by claude on 2026-09-10 (api.ts, store.ts). Checked 2026-09-13: apps/web/src/lib/api.ts no longer exists.",
+      "addedAt": "2026-09-13"
     }
   ]
 }

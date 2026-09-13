@@ -974,6 +974,20 @@
       "summary": "The Symphonee in-app browser does not render MapLibre GL: a map reaches styledata but never fires render or load, even for a stock CDN build in a fixed div (WebGL context is present). Do not debug map rendering there; verify maps in the user browser and check that the style URL and workers are reachable instead",
       "detail": null,
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A fixed bottom bar with padding-bottom: env(safe-area-inset-bottom) inside a fixed height shows a line of page content under it when the inset is 0; give the bar height calc(height + inset), bottom: -1px and a transparent bottom border",
+      "detail": null,
+      "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "SiteForge harvest-site.mjs now writes the full catalog and profile shape the validator wants (sourceSite, sourcePath, files, category, screenshot, dependencies, interactions, brand, palette, typography, studio, deploy); only purposes remain to write by hand, one line per new pattern",
+      "detail": null,
+      "addedAt": "2026-09-13"
     }
   ]
 }

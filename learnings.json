@@ -1030,6 +1030,13 @@
       "summary": "In the Symphonee workbench every view is rendered with key={view}, so switching views REMOUNTS the stage and any state a component held is lost - that is why a tab 'resets' when you step into a shell and come back. State that should survive belongs in the store, keyed by whatever it describes (a device serial, a repo), not in the component.",
       "detail": "Also: a checklist step must never be derived from transient state. 'terminals.length > 0' un-completes when shells close, so a getting-started chip reappeared on every launch. Latch a step once it has ever been true.",
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "save-note.js fails with EINVAL on Windows when the title contains a colon: the title becomes the filename and rename() rejects it. Use a dash.",
+      "detail": null,
+      "addedAt": "2026-09-13"
     }
   ]
 }

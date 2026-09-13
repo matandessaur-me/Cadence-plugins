@@ -1002,6 +1002,13 @@
       "summary": "A fixed bottom bar (position fixed, bottom 0) shows a 1px line of page under it on some browsers because the viewport height is fractional. bottom:-1px does not cure it; paint the bar colour past the edge with a ::after (top:100%, height 3rem, background inherit) on the element that carries the colour.",
       "detail": null,
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "In the Symphonee workbench, position:fixed does NOT resolve against the viewport: .wb__view carries animation: view-in ... both, which leaves an identity transform on the element forever, and a transformed ancestor becomes the containing block for every fixed child. A panel placed at computed viewport coordinates landed hundreds of pixels off. Render floating panels through createPortal(document.body), or measure relative to the containing block.",
+      "detail": "Also: a toolbar with align-items: stretch makes an inline-flex wrapper take the full row height, so a shorter chip inside it sits at the TOP of the row rather than on the icons' centre line - set align-items: center on the wrapper. Both were found by measuring getBoundingClientRect in the in-app browser rather than by looking at a screenshot.",
+      "addedAt": "2026-09-13"
     }
   ]
 }

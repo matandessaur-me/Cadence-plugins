@@ -1044,6 +1044,13 @@
       "summary": "Learnings are semantically invisible to Mind retrieval: extractors/learnings.js emits every learning as kind concept, which is excluded from RECALL_KINDS (recall.js: memory, conversation, drawer) and from the dense embedding scope (eval/dense.js DEFAULT_KINDS), so 153 learning nodes are reachable only by BM25 lexical overlap against 3647 other concept nodes. Measured recall@5 for symptom-shaped questions: 12.8 percent. The 85KB of learnings shipped in every bootstrap has been masking this - slim the payload without fixing the kind and Symphonee goes blind to its own mistakes.",
       "detail": "Found by packages/core/cjs/eval/awareness.js against gold/bootstrap-awareness.json. Fix: give learnings their own kind, add it to RECALL_KINDS and the dense kind scope, rebuild embeddings, re-run the eval before shipping any bootstrap diet.",
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "Mind retrieval quality on this corpus was limited by the embedding model, not the text: nomic-embed-text separates a relevant learning from the best wrong one by only +0.036 cosine, so relevance and coincidence are nearly indistinguishable. qwen3-embedding:0.6b gives +0.086 and lifts learnings-only recall@5 from 76.9 to 88.5 percent.",
+      "detail": "Measured by packages/core/cjs/eval/embed-model-shootout.js over 149 learnings and 13 symptom-shaped questions. mxbai-embed-large 84.6, bge-m3 76.9. Before rewriting text to improve retrieval, measure the separation gap - if it is under about 0.05 the model is the ceiling and better writing cannot move recall. Swapping the global model is a separate and much larger decision: it re-embeds every vector at a new dimension and needs its own eval against gold/retrieval.json.",
+      "addedAt": "2026-09-13"
     }
   ]
 }

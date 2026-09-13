@@ -1051,6 +1051,34 @@
       "summary": "Mind retrieval quality on this corpus was limited by the embedding model, not the text: nomic-embed-text separates a relevant learning from the best wrong one by only +0.036 cosine, so relevance and coincidence are nearly indistinguishable. qwen3-embedding:0.6b gives +0.086 and lifts learnings-only recall@5 from 76.9 to 88.5 percent.",
       "detail": "Measured by packages/core/cjs/eval/embed-model-shootout.js over 149 learnings and 13 symptom-shaped questions. mxbai-embed-large 84.6, bge-m3 76.9. Before rewriting text to improve retrieval, measure the separation gap - if it is under about 0.05 the model is the ceiling and better writing cannot move recall. Swapping the global model is a separate and much larger decision: it re-embeds every vector at a new dimension and needs its own eval against gold/retrieval.json.",
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change was reverted: SiteExample04 studio layout title reads SCHRITT Studio and the site type-checks",
+      "detail": "Claimed by claude on 2026-09-10 (layout.tsx). Checked 2026-09-13: src/app/(studio)/layout.tsx no longer exists.",
+      "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change was reverted: Studio structure.ts matches reference, presentationTool preserved alongside structureTool/visionTool/media(), studio title branded, header p",
+      "detail": "Claimed by claude on 2026-09-10 (structure.ts, sanity.config.ts, layout.tsx, header.schema.ts). Checked 2026-09-13: src/sanity/structure.ts no longer exists.",
+      "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change was reverted: SiteExample02 studio structure/config/layout/previews match the SiteExample01 reference and build succeeds",
+      "detail": "Claimed by claude on 2026-09-10 (layout.tsx, schemaRegistry.ts). Checked 2026-09-13: src/app/(studio)/layout.tsx no longer exists.",
+      "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change was reverted: siteSettings document _id=siteSettings exists in vsugoymh/production dataset with enableStandaloneGA4=false and no required fields empty",
+      "detail": "Claimed by claude on 2026-09-10 (seed-site-settings.js). Checked 2026-09-13: .ai-workspace/seed-site-settings.js no longer exists.",
+      "addedAt": "2026-09-13"
     }
   ]
 }

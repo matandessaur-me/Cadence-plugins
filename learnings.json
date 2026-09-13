@@ -1079,6 +1079,13 @@
       "summary": "A change was reverted: siteSettings document _id=siteSettings exists in vsugoymh/production dataset with enableStandaloneGA4=false and no required fields empty",
       "detail": "Claimed by claude on 2026-09-10 (seed-site-settings.js). Checked 2026-09-13: .ai-workspace/seed-site-settings.js no longer exists.",
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "The outcome loop was manufacturing false learnings: outcomes.ts coerced a missing file into the verdict reverted, and pinned every claim from a shell with no active repo to the workspace default repo. 54 of 90 pending claims were filed against a repository that had never contained their files, so each would have come back reverted and been written back as a learning.",
+      "detail": "Fixed by re-homing a claim from its files when the default repo does not contain them, recording present[] at claim time, and answering unknown when a file was never there. A real deletion still reads reverted. Before trusting any calibration or any learning that says a change was reverted, check that the claim repoPath actually contains the files.",
+      "addedAt": "2026-09-13"
     }
   ]
 }

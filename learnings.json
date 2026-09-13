@@ -1016,6 +1016,13 @@
       "summary": "An integration that needs a model key must take it from Symphonee Settings (config AiApiKeys), never from a second .env inside the data dir. Artemis shipped reading only its own .env and every run died in the planner on auth while the UI showed 'pending' forever. Also: a status field like 'configured' must mean the thing is usable (a key is reachable), not that a file exists.",
       "detail": "Google's planner reads GOOGLE_API_KEY while Settings and Gemini's docs say GEMINI_API_KEY: map one to the other rather than asking for the key twice. And surface the daemon's own readiness probe before the action, not silence after it.",
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "A long-lived helper daemon (Artemis on 127.0.0.1:8000) survives a Symphonee upgrade and keeps the OLD build's environment, so a key added in Settings appears to have no effect: the new server finds the port reachable and never respawns it. Stop the daemon and Start it again after an upgrade or a settings change, and treat 'unmanaged and running' as a reason to restart rather than to reuse.",
+      "detail": null,
+      "addedAt": "2026-09-13"
     }
   ]
 }

@@ -1100,6 +1100,13 @@
       "summary": "Boot-time data migration that triggers on an empty data directory will also fire for every throwaway --data-dir, so tests and scratch runs inherit the whole real install and blow their startup budget.",
       "detail": "Gate a one-time adoption/migration on the data dir being the DEFAULT one (no explicit --data-dir / env override), not merely on it being empty. An explicit data dir is a scratch run, a test or a second profile and always wants to start empty.",
       "addedAt": "2026-09-14"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change regressed: an AI in a shell can ask Symphonee what it can do and run any of it from HTTP, MCP, the palette or the CLI, with dry runs and recorded refus",
+      "detail": "Claimed by claude on 2026-09-11 (action-registry.ts, actions.ts, ci.yml). Checked 2026-09-14: Test failed (1): node --test packages/gateway/dist/concurrency.test.js. Could not find 'packages/gateway/dist/concurrency.test.js'",
+      "addedAt": "2026-09-14"
     }
   ]
 }

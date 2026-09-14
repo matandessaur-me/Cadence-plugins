@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-13",
+  "updated": "2026-09-14",
   "learnings": [
     {
       "category": "cli-flags",
@@ -1086,6 +1086,20 @@
       "summary": "The outcome loop was manufacturing false learnings: outcomes.ts coerced a missing file into the verdict reverted, and pinned every claim from a shell with no active repo to the workspace default repo. 54 of 90 pending claims were filed against a repository that had never contained their files, so each would have come back reverted and been written back as a learning.",
       "detail": "Fixed by re-homing a claim from its files when the default repo does not contain them, recording present[] at claim time, and answering unknown when a file was never there. A real deletion still reads reverted. Before trusting any calibration or any learning that says a change was reverted, check that the claim repoPath actually contains the files.",
       "addedAt": "2026-09-13"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A source file can contain a literal NUL byte (e.g. a string joined on '\u0000'), which makes ripgrep and any 'is it binary' check skip it silently. A repo-wide rename can miss such a file and the gap only surfaces at compile time.",
+      "detail": "Do not treat 'contains a NUL' as 'binary' for known source extensions. Either allowlist source extensions before the NUL check, or run a second pass that reports text files carrying a NUL and handle them byte-safely (Buffer 'binary' round-trip preserves the NUL).",
+      "addedAt": "2026-09-14"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "Boot-time data migration that triggers on an empty data directory will also fire for every throwaway --data-dir, so tests and scratch runs inherit the whole real install and blow their startup budget.",
+      "detail": "Gate a one-time adoption/migration on the data dir being the DEFAULT one (no explicit --data-dir / env override), not merely on it being empty. An explicit data dir is a scratch run, a test or a second profile and always wants to start empty.",
+      "addedAt": "2026-09-14"
     }
   ]
 }

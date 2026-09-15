@@ -1142,6 +1142,13 @@
       "summary": "Codex on a ChatGPT (subscription) account rejects model gpt-5.4 with 400 invalid_request_error, even though cli-models lists it as the codex default and the router recommends it for long-autonomy; a spawn with it dies before the first step. Use claude for long-autonomy spawns on this machine until the codex model list is fixed.",
       "detail": null,
       "addedAt": "2026-09-15"
+    },
+    {
+      "category": "orchestration",
+      "cli": "claude",
+      "summary": "A headless claude worker streams no output until it exits (task output stays empty for the whole run), so the orchestrator UI marks a long SiteForge supervisor as stale while it is actively writing brand.json and sitemap.json. Judge liveness by the process and the run-folder artefact timestamps, not by the stale badge; for multi-hour builds prefer a visible terminal.",
+      "detail": null,
+      "addedAt": "2026-09-15"
     }
   ]
 }

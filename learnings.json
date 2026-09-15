@@ -1170,6 +1170,13 @@
       "summary": "Two SiteForge briefs written in one session both defaulted to a light ground, hairlines, one accent and big display type, and the owner read the two sites as the same design. When writing look.direction, choose the register first (loud colour rooms, cinematic dark, warm editorial, coastal organic, narrative, magazine frame, immersive scroll) and make it differ from the previous two builds; minimal Swiss is never the default.",
       "detail": null,
       "addedAt": "2026-09-15"
+    },
+    {
+      "category": "general",
+      "cli": null,
+      "summary": "SiteForge stage 07 passed verify.mjs on a site whose phone view had a wrapping button label in a fixed bottom bar, a menu toggle with an odd decorative mark, and a mobile menu that did not cover the viewport. The script cannot see these; the agent must read every phone screenshot (390 and 412) and measure button label lines before calling a site verified. A sticky bottom call bar is a per-brief decision, not a default.",
+      "detail": null,
+      "addedAt": "2026-09-15"
     }
   ]
 }

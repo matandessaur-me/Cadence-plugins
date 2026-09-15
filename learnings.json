@@ -1177,6 +1177,13 @@
       "summary": "SiteForge stage 07 passed verify.mjs on a site whose phone view had a wrapping button label in a fixed bottom bar, a menu toggle with an odd decorative mark, and a mobile menu that did not cover the viewport. The script cannot see these; the agent must read every phone screenshot (390 and 412) and measure button label lines before calling a site verified. A sticky bottom call bar is a per-brief decision, not a default.",
       "detail": null,
       "addedAt": "2026-09-15"
+    },
+    {
+      "category": "general",
+      "cli": null,
+      "summary": "Over-correcting a review rule breaks the next builds: after the owner rejected copied blocks, the SiteForge playbooks were rewritten to scaffold every block from scratch and keep pages quiet, and the next two sites came out identical and minimal. A rule that says what not to do needs the positive default next to it (here: start from the library component and transform it), or the agent lands on the blandest safe option.",
+      "detail": null,
+      "addedAt": "2026-09-15"
     }
   ]
 }

@@ -1149,6 +1149,13 @@
       "summary": "A headless claude worker streams no output until it exits (task output stays empty for the whole run), so the orchestrator UI marks a long SiteForge supervisor as stale while it is actively writing brand.json and sitemap.json. Judge liveness by the process and the run-folder artefact timestamps, not by the stale badge; for multi-hour builds prefer a visible terminal.",
       "detail": null,
       "addedAt": "2026-09-15"
+    },
+    {
+      "category": "orchestration",
+      "cli": null,
+      "summary": "A Cadence restart kills every headless orchestrator worker (task marked App was restarted while task was running) and nothing resumes them. A multi-hour build dispatched headless needs a RESUME prompt that reads the run folder and continues from the last complete artefact; write it up front so the restart costs minutes, not the build.",
+      "detail": null,
+      "addedAt": "2026-09-15"
     }
   ]
 }

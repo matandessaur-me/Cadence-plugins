@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-14",
+  "updated": "2026-09-15",
   "learnings": [
     {
       "category": "cli-flags",
@@ -1107,6 +1107,27 @@
       "summary": "A change regressed: an AI in a shell can ask Symphonee what it can do and run any of it from HTTP, MCP, the palette or the CLI, with dry runs and recorded refus",
       "detail": "Claimed by claude on 2026-09-11 (action-registry.ts, actions.ts, ci.yml). Checked 2026-09-14: Test failed (1): node --test packages/gateway/dist/concurrency.test.js. Could not find 'packages/gateway/dist/concurrency.test.js'",
       "addedAt": "2026-09-14"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "Renaming a product across stored user data must rename PATHS as well as file contents. Notebooks, document titles and per-space state directories are often named after the brand, and config keys that point at them get rewritten by the content pass - so rewriting contents alone leaves the config naming a space whose data still sits under the old directory, and it opens empty.",
+      "detail": "Do the path rename depth-first with exactly the same substitution rules as the content rewrite, so a path stored inside a data file and the path on disk land on the same string. Also rename before or after consistently, and exempt any deliberate provenance record from both passes so a re-run cannot scrub it.",
+      "addedAt": "2026-09-14"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "Rewriting stored prose during a rename destroys retrievability: searches for the old name return nothing, so a knowledge base silently loses its own history. Keep the old name in the INDEX even when removing it from the text.",
+      "detail": "Expand a query carrying any former product name to include the current one and the reverse, at the single tokenizer choke point. Keep the former-name list as data with a rule against adding a name that means something else in the user's world, and keep one deliberate provenance record exempt from the rewrite.",
+      "addedAt": "2026-09-14"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "Never run a find-and-replace across a whole stylesheet to change one rule. A CSS shorthand means different things to different rules: replacing 'position: absolute; inset: 0' with 'left: 0; top: 0' collapsed four full-bleed layers (including the terminal's) to zero size, silently, because the elements still exist and are still positioned.",
+      "detail": "inset: 0 is the only thing giving size to an absolutely positioned element that has no width/height of its own. There is no error when it is removed, so the failure reaches the user as a rendering bug with no console trace. Change the specific rule by matching its selector, and add a contract test asserting the layers that must fill their container keep inset: 0.",
+      "addedAt": "2026-09-15"
     }
   ]
 }

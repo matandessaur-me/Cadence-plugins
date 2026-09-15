@@ -1184,6 +1184,13 @@
       "summary": "Over-correcting a review rule breaks the next builds: after the owner rejected copied blocks, the SiteForge playbooks were rewritten to scaffold every block from scratch and keep pages quiet, and the next two sites came out identical and minimal. A rule that says what not to do needs the positive default next to it (here: start from the library component and transform it), or the agent lands on the blandest safe option.",
       "detail": null,
       "addedAt": "2026-09-15"
+    },
+    {
+      "category": "orchestration",
+      "cli": "claude",
+      "summary": "Running two Opus SiteForge supervisors plus two Opus research agents in parallel on one Claude subscription hit the session usage limit twice in one afternoon (11:57 and 14:46), and every headless worker died each time with no resume. Budget parallel Opus workers against the limit: at most two long-running Opus agents at once, keep a RESUME note current in each run folder, and check the run-folder timestamps after any limit message.",
+      "detail": null,
+      "addedAt": "2026-09-15"
     }
   ]
 }

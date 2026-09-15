@@ -1135,6 +1135,13 @@
       "summary": "Renaming a project directory orphans每 CLI's session history in a different way, and each tool must be checked separately: one keys sessions by a slug of the folder name, another records the working directory inside each transcript and lists sessions for the directory you stand in, another stores cwd in a per-session workspace file.",
       "detail": "Do not assume that migrating one CLI's history covers the rest. Check each tool's home directory for path-keyed folders and for cwd fields inside session files. Rewrite only the opening/metadata record of a transcript, never the conversation body, and match on a string specific enough to exclude a predecessor project with a similar name.",
       "addedAt": "2026-09-15"
+    },
+    {
+      "category": "orchestration",
+      "cli": "codex",
+      "summary": "Codex on a ChatGPT (subscription) account rejects model gpt-5.4 with 400 invalid_request_error, even though cli-models lists it as the codex default and the router recommends it for long-autonomy; a spawn with it dies before the first step. Use claude for long-autonomy spawns on this machine until the codex model list is fixed.",
+      "detail": null,
+      "addedAt": "2026-09-15"
     }
   ]
 }

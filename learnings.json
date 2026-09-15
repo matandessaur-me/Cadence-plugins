@@ -1163,6 +1163,13 @@
       "summary": "When the Claude usage limit hits, every headless claude worker dies and the orchestrator later shows an empty task list, so a parallel multi-hour build silently stops; nothing resumes it when the limit resets. Check the run-folder timestamps after a limit message and respawn from a RESUME prompt that names the exact remaining stage.",
       "detail": null,
       "addedAt": "2026-09-15"
+    },
+    {
+      "category": "general",
+      "cli": null,
+      "summary": "Two SiteForge briefs written in one session both defaulted to a light ground, hairlines, one accent and big display type, and the owner read the two sites as the same design. When writing look.direction, choose the register first (loud colour rooms, cinematic dark, warm editorial, coastal organic, narrative, magazine frame, immersive scroll) and make it differ from the previous two builds; minimal Swiss is never the default.",
+      "detail": null,
+      "addedAt": "2026-09-15"
     }
   ]
 }

@@ -1156,6 +1156,13 @@
       "summary": "A Cadence restart kills every headless orchestrator worker (task marked App was restarted while task was running) and nothing resumes them. A multi-hour build dispatched headless needs a RESUME prompt that reads the run folder and continues from the last complete artefact; write it up front so the restart costs minutes, not the build.",
       "detail": null,
       "addedAt": "2026-09-15"
+    },
+    {
+      "category": "orchestration",
+      "cli": "claude",
+      "summary": "When the Claude usage limit hits, every headless claude worker dies and the orchestrator later shows an empty task list, so a parallel multi-hour build silently stops; nothing resumes it when the limit resets. Check the run-folder timestamps after a limit message and respawn from a RESUME prompt that names the exact remaining stage.",
+      "detail": null,
+      "addedAt": "2026-09-15"
     }
   ]
 }

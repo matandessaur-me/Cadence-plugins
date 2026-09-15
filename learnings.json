@@ -1128,6 +1128,13 @@
       "summary": "Never run a find-and-replace across a whole stylesheet to change one rule. A CSS shorthand means different things to different rules: replacing 'position: absolute; inset: 0' with 'left: 0; top: 0' collapsed four full-bleed layers (including the terminal's) to zero size, silently, because the elements still exist and are still positioned.",
       "detail": "inset: 0 is the only thing giving size to an absolutely positioned element that has no width/height of its own. There is no error when it is removed, so the failure reaches the user as a rendering bug with no console trace. Change the specific rule by matching its selector, and add a contract test asserting the layers that must fill their container keep inset: 0.",
       "addedAt": "2026-09-15"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "Renaming a project directory orphans每 CLI's session history in a different way, and each tool must be checked separately: one keys sessions by a slug of the folder name, another records the working directory inside each transcript and lists sessions for the directory you stand in, another stores cwd in a per-session workspace file.",
+      "detail": "Do not assume that migrating one CLI's history covers the rest. Check each tool's home directory for path-keyed folders and for cwd fields inside session files. Rewrite only the opening/metadata record of a transcript, never the conversation body, and match on a string specific enough to exclude a predecessor project with a similar name.",
+      "addedAt": "2026-09-15"
     }
   ]
 }

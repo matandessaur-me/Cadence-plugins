@@ -1261,6 +1261,13 @@
       "summary": "Never stage everything inside an installed plugin checkout: the live config file with credentials gets committed.",
       "detail": "Add files by name (plugin.json, ui files, routes). Where the config file is tracked upstream as a template, mark the live copy skip-worktree so it never shows as changed.",
       "addedAt": "2026-09-16"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "Never start a Next dev server while a SiteForge check (ladder, native, a11y, perf) runs against a production build: dev and start share the .next folder and the check measures an unstyled page (chunks answer 500).",
+      "detail": "Seen on 2026-09-16: the ladder scored 5/13 with h1 16px and 0 stylesheets after the dev server was restarted mid-run. Stop the dev server, rebuild, run the checks, then restart dev. The ladder now prints browser console errors when the page it measures is broken.",
+      "addedAt": "2026-09-16"
     }
   ]
 }

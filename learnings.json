@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-15",
+  "updated": "2026-09-16",
   "learnings": [
     {
       "category": "cli-flags",
@@ -1191,6 +1191,13 @@
       "summary": "Running two Opus SiteForge supervisors plus two Opus research agents in parallel on one Claude subscription hit the session usage limit twice in one afternoon (11:57 and 14:46), and every headless worker died each time with no resume. Budget parallel Opus workers against the limit: at most two long-running Opus agents at once, keep a RESUME note current in each run folder, and check the run-folder timestamps after any limit message.",
       "detail": null,
       "addedAt": "2026-09-15"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "Screenshots of Webflow exports and GSAP sections in the in-app browser come back blank or stuck on a preloader unless the entrance timelines are finished first",
+      "detail": "file:// pages work in the in-app browser (POST /api/browser/navigate). A Webflow export waits on its videos before lifting the preloader (remove .animation_preloader/.preloader/.transition via eval, or shoot from the copy that has the videos); GSAP or SplitText entrance animations leave text at opacity 0 in a static capture: run gsap.globalTimeline.getChildren().forEach(t=>t.progress(1)) and inject an opacity:1 override before the shutter. In a demo page, a body background paints over an html background driven by a CSS variable.",
+      "addedAt": "2026-09-16"
     }
   ]
 }

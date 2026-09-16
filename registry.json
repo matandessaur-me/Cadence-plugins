@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "updated": "2026-09-16",
   "plugins": [
     {
@@ -147,7 +147,7 @@
       "name": "Sanity",
       "description": "Manage Sanity.io datasets, document types, and documents with AI-powered actions",
       "author": "M8N-MatanDessaur",
-      "version": "2.1.0",
+      "version": "2.1.1",
       "icon": "database",
       "tint": "242, 77, 52",
       "repo": "https://github.com/M8N-MatanDessaur/cadence-plugin-sanity",

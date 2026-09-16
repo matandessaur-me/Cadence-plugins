@@ -1240,6 +1240,13 @@
       "summary": "Playwright (iPhone 13 device) and the in-app browser emulation can disagree on horizontal overflow at 390: a grid child holding a horizontal rail widened the page under Playwright only. Give rail roots min-width: 0 and max-width: 100 percent and use grid-template-columns: minmax(0, 1fr) on their parent; native.mjs now names the culprit element in its horizontal-scroll finding.",
       "detail": null,
       "addedAt": "2026-09-16"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "On Windows, netlify deploy --build fails for a Next 16 site with a proxy (Node middleware): the Netlify Next runtime packages it as an edge function and the local edge bundler dies on a turbopack chunk path or with findSourceMap is not a function. Push the repository to GitHub and let Netlify build on Linux (SiteForge: scripts/link-ci.mjs then deploy.mjs --ci); switching the local build to webpack does not help.",
+      "detail": null,
+      "addedAt": "2026-09-16"
     }
   ]
 }

@@ -1254,6 +1254,13 @@
       "summary": "az monitor app-insights query on Windows PowerShell: double quotes inside --analytics-query are stripped by the az.cmd wrapper and the query fails with BadArgumentError: invalid properties. Use single-quoted KQL string literals (KQL accepts them) and always pass --offset (default window is 1h). Pipes inside regex patterns are also parsed by cmd; use has_any instead of matches regex with |.",
       "detail": null,
       "addedAt": "2026-09-16"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "Never stage everything inside an installed plugin checkout: the live config file with credentials gets committed.",
+      "detail": "Add files by name (plugin.json, ui files, routes). Where the config file is tracked upstream as a template, mark the live copy skip-worktree so it never shows as changed.",
+      "addedAt": "2026-09-16"
     }
   ]
 }

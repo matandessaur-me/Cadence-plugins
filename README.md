@@ -1,11 +1,11 @@
-# Symphonee Plugin Registry & Shared Intelligence
+# Cadence Plugin Registry & Shared Intelligence
 
-Official plugin registry and shared learnings for [Symphonee](https://github.com/matandessaur-me/Symphonee) -- the execution engine for AI workflows.
+Official plugin registry and shared learnings for [Cadence](https://github.com/matandessaur-me/Cadence) -- the execution engine for AI workflows.
 
 ## What This Repo Contains
 
 - **registry.json** -- Plugin registry listing all available plugins, versions, and repo URLs
-- **learnings.json** -- Collective intelligence shared across all Symphonee installations
+- **learnings.json** -- Collective intelligence shared across all Cadence installations
 
 ## Available Plugins
 
@@ -19,11 +19,11 @@ Official plugin registry and shared learnings for [Symphonee](https://github.com
 | [Environment Manager](https://github.com/M8N-MatanDessaur/devops-pilot-plugin-env-manager) | Manage .env files across repos | 1.1.0 |
 | [Sentry](https://github.com/M8N-MatanDessaur/devops-pilot-plugin-sentry) | Monitor application errors via Sentry | 1.1.0 |
 
-> Plugin package names still use the `devops-pilot-plugin-*` prefix for install-base stability. A later release will migrate them to `symphonee-plugin-*`.
+> Plugin package names still use the `devops-pilot-plugin-*` prefix for install-base stability. A later release will migrate them to `cadence-plugin-*`.
 
 ## Shared Learnings (Collective Intelligence)
 
-Symphonee instances automatically record generic technical learnings (CLI quirks, shell gotchas, platform issues) and can sync them through this repo. This creates a collective knowledge base that makes every installation smarter over time.
+Cadence instances automatically record generic technical learnings (CLI quirks, shell gotchas, platform issues) and can sync them through this repo. This creates a collective knowledge base that makes every installation smarter over time.
 
 **How it works:**
 1. When an AI agent encounters a technical failure (wrong CLI flags, shell issues, etc.), the system records it locally.
@@ -51,4 +51,4 @@ Your plugin repo must contain at minimum:
 - `plugin.json` -- manifest with id, name, version, description, contributions
 - `routes.js` -- server-side API routes (if needed)
 
-See the [Symphonee repo](https://github.com/matandessaur-me/Symphonee) for full SDK documentation.
+See the [Cadence repo](https://github.com/matandessaur-me/Cadence) for full SDK documentation.

@@ -1247,6 +1247,13 @@
       "summary": "On Windows, netlify deploy --build fails for a Next 16 site with a proxy (Node middleware): the Netlify Next runtime packages it as an edge function and the local edge bundler dies on a turbopack chunk path or with findSourceMap is not a function. Push the repository to GitHub and let Netlify build on Linux (SiteForge: scripts/link-ci.mjs then deploy.mjs --ci); switching the local build to webpack does not help.",
       "detail": null,
       "addedAt": "2026-09-16"
+    },
+    {
+      "category": "cli-flags",
+      "cli": "claude",
+      "summary": "az monitor app-insights query on Windows PowerShell: double quotes inside --analytics-query are stripped by the az.cmd wrapper and the query fails with BadArgumentError: invalid properties. Use single-quoted KQL string literals (KQL accepts them) and always pass --offset (default window is 1h). Pipes inside regex patterns are also parsed by cmd; use has_any instead of matches regex with |.",
+      "detail": null,
+      "addedAt": "2026-09-16"
     }
   ]
 }

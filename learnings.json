@@ -1198,6 +1198,13 @@
       "summary": "Screenshots of Webflow exports and GSAP sections in the in-app browser come back blank or stuck on a preloader unless the entrance timelines are finished first",
       "detail": "file:// pages work in the in-app browser (POST /api/browser/navigate). A Webflow export waits on its videos before lifting the preloader (remove .animation_preloader/.preloader/.transition via eval, or shoot from the copy that has the videos); GSAP or SplitText entrance animations leave text at opacity 0 in a static capture: run gsap.globalTimeline.getChildren().forEach(t=>t.progress(1)) and inject an opacity:1 override before the shutter. In a demo page, a body background paints over an html background driven by a CSS variable.",
       "addedAt": "2026-09-16"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "In-app browser screenshots tile vertically when the emulated height (844) exceeds the pane: the bottom of the capture repeats the top of the page",
+      "detail": "POST /api/browser/emulate/device with height 844 on a pane shorter than that produced a 390x844 capture whose lower third was the announcement bar and header again. Measure with eval (getBoundingClientRect) and keep the emulated height at or under the pane height (700 worked) for a faithful picture; or read the DOM numbers instead of trusting the bottom of a tall capture.",
+      "addedAt": "2026-09-16"
     }
   ]
 }

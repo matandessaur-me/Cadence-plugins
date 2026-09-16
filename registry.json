@@ -1,11 +1,11 @@
 {
-  "version": 4,
+  "version": 5,
   "updated": "2026-09-16",
   "plugins": [
     {
       "id": "azure-devops",
       "name": "Azure DevOps",
-      "version": "0.7.1",
+      "version": "0.8.0",
       "description": "Azure DevOps: work items, iterations, teams, velocity, areas, activity, AB# auto-linking",
       "icon": "kanban",
       "tint": "0, 120, 215",
@@ -33,14 +33,15 @@
         "retrospective",
         "AB#",
         "ab-reference"
-      ]
+      ],
+      "handle": "@ado"
     },
     {
       "id": "builderio",
       "name": "Builder.io",
       "description": "Manage Builder.io models, schemas, and content entries with AI-powered actions",
       "author": "M8N-MatanDessaur",
-      "version": "2.8.3",
+      "version": "2.9.0",
       "icon": "blocks",
       "tint": "160, 120, 210",
       "repo": "https://github.com/M8N-MatanDessaur/cadence-plugin-builderio",
@@ -48,7 +49,8 @@
         "cms",
         "builder.io",
         "content"
-      ]
+      ],
+      "handle": "@builder"
     },
     {
       "id": "dependency-inspector",
@@ -104,7 +106,7 @@
     {
       "id": "github",
       "name": "GitHub",
-      "version": "0.6.2",
+      "version": "0.7.0",
       "description": "GitHub integration: repositories, pull requests, reviews, cloning, git log",
       "icon": "github",
       "tint": "110, 125, 170",
@@ -120,7 +122,8 @@
         "clone from github",
         "github repo",
         "github repos"
-      ]
+      ],
+      "handle": "@gh"
     },
     {
       "id": "release-manager",
@@ -144,7 +147,7 @@
       "name": "Sanity",
       "description": "Manage Sanity.io datasets, document types, and documents with AI-powered actions",
       "author": "M8N-MatanDessaur",
-      "version": "2.0.2",
+      "version": "2.1.0",
       "icon": "database",
       "tint": "242, 77, 52",
       "repo": "https://github.com/M8N-MatanDessaur/cadence-plugin-sanity",
@@ -155,7 +158,8 @@
         "groq",
         "content",
         "studio"
-      ]
+      ],
+      "handle": "@sanity"
     },
     {
       "id": "sentry",
@@ -179,7 +183,7 @@
       "name": "WordPress",
       "description": "Manage WordPress sites via the REST API -- create and edit posts, pages, media, categories, comments, users, and SEO metadata (Yoast / RankMath)",
       "author": "M8N-MatanDessaur",
-      "version": "2.0.2",
+      "version": "2.1.0",
       "icon": "feather",
       "tint": "33, 117, 155",
       "repo": "https://github.com/M8N-MatanDessaur/cadence-plugin-wordpress",
@@ -191,7 +195,8 @@
         "yoast",
         "rankmath",
         "media"
-      ]
+      ],
+      "handle": "@wp"
     },
     {
       "id": "supabase",
@@ -234,7 +239,7 @@
     {
       "id": "siteforge",
       "name": "SiteForge",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "description": "SiteForge as a screen: every site the tool has built, the Sanity projects behind them, a new site in one form that lands in a Claude terminal, and Open Studio, Open Site, Open Code, Open Terminal on each project.",
       "icon": "layers",
       "tint": "52, 71, 58",
@@ -253,7 +258,8 @@
         "netlify site",
         "open studio",
         "site template"
-      ]
+      ],
+      "handle": "@site"
     }
   ]
 }

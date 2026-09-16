@@ -1205,6 +1205,13 @@
       "summary": "In-app browser screenshots tile vertically when the emulated height (844) exceeds the pane: the bottom of the capture repeats the top of the page",
       "detail": "POST /api/browser/emulate/device with height 844 on a pane shorter than that produced a 390x844 capture whose lower third was the announcement bar and header again. Measure with eval (getBoundingClientRect) and keep the emulated height at or under the pane height (700 worked) for a faithful picture; or read the DOM numbers instead of trusting the bottom of a tall capture.",
       "addedAt": "2026-09-16"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "styled-components: a raw @keyframes inside a component template literal does not animate; use the keyframes helper and interpolate it",
+      "detail": "In the SiteForge template the conversation form animated .field with a nested @keyframes block inside a conditional interpolation; the element stayed at opacity 0 (animation-fill-mode both with keyframes the runtime never registered). Declaring const convIn = keyframes`...` and interpolating ${convIn} fixed it. Also: the template demo site keeps its form block in a campaign variant shown only with ?utm_source=meta, so a plain visit shows no form.",
+      "addedAt": "2026-09-16"
     }
   ]
 }

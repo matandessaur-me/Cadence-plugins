@@ -1268,6 +1268,13 @@
       "summary": "Never start a Next dev server while a SiteForge check (ladder, native, a11y, perf) runs against a production build: dev and start share the .next folder and the check measures an unstyled page (chunks answer 500).",
       "detail": "Seen on 2026-09-16: the ladder scored 5/13 with h1 16px and 0 stylesheets after the dev server was restarted mid-run. Stop the dev server, rebuild, run the checks, then restart dev. The ladder now prints browser console errors when the page it measures is broken.",
       "addedAt": "2026-09-16"
+    },
+    {
+      "category": "shell",
+      "cli": "claude",
+      "summary": "Patching files that contain backslash-quote escapes or accents from a bash heredoc into python or node -e is unreliable on Windows; write the patch script to a file with the Write tool, normalise CRLF before matching, and match accented spans with a wildcard.",
+      "detail": "Three failed patch attempts on gen-content.mjs: python read stdin as cp1252, str.replace replaced every occurrence of a word, and a literal backslash-quote in the pattern never matched even when the bytes looked identical. What worked: a .mjs patch file, split on CR before matching, and a regex with a dot for the escaped quote.",
+      "addedAt": "2026-09-16"
     }
   ]
 }

@@ -1219,6 +1219,13 @@
       "summary": "A bash chain of the form a && b && for ...; done; git commit; git push runs the commit and push even when a fails: the semicolons after the loop break the && chain",
       "detail": "Resolving a merge with node -e failed on a regex, but the git add/commit/push that followed the for loop ran anyway and pushed conflict markers. Put the whole sequence in one script with set -e, or gate the push on an explicit check (grep for <<<<<<< before committing).",
       "addedAt": "2026-09-16"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "Node 24.16 on Windows: `node --test --test-force-exit` aborts with a libuv assertion (UV_HANDLE_CLOSING, src/win/async.c) after every test in a file has PASSED, for any test file that opened an http server or used fetch. The file is then reported as failed. Run the file without --test-force-exit to see the real result; packages/gateway server/event-bus tests hit it too.",
+      "detail": null,
+      "addedAt": "2026-09-16"
     }
   ]
 }

@@ -1226,6 +1226,20 @@
       "summary": "Node 24.16 on Windows: `node --test --test-force-exit` aborts with a libuv assertion (UV_HANDLE_CLOSING, src/win/async.c) after every test in a file has PASSED, for any test file that opened an http server or used fetch. The file is then reported as failed. Run the file without --test-force-exit to see the real result; packages/gateway server/event-bus tests hit it too.",
       "detail": null,
       "addedAt": "2026-09-16"
+    },
+    {
+      "category": "shell",
+      "cli": "claude",
+      "summary": "Git Bash converts a bare / argument (and other POSIX-looking paths) into the Git install path before node sees it; a screenshot helper given / as the page path navigated to localhost:3110C:/Program Files/Git/ and wrote a 0-byte NTFS stream file named C. Set MSYS_NO_PATHCONV=1 (or pass the path from PowerShell) when a script takes URL paths as arguments.",
+      "detail": null,
+      "addedAt": "2026-09-16"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "Playwright (iPhone 13 device) and the in-app browser emulation can disagree on horizontal overflow at 390: a grid child holding a horizontal rail widened the page under Playwright only. Give rail roots min-width: 0 and max-width: 100 percent and use grid-template-columns: minmax(0, 1fr) on their parent; native.mjs now names the culprit element in its horizontal-scroll finding.",
+      "detail": null,
+      "addedAt": "2026-09-16"
     }
   ]
 }

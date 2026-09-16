@@ -1212,6 +1212,13 @@
       "summary": "styled-components: a raw @keyframes inside a component template literal does not animate; use the keyframes helper and interpolate it",
       "detail": "In the SiteForge template the conversation form animated .field with a nested @keyframes block inside a conditional interpolation; the element stayed at opacity 0 (animation-fill-mode both with keyframes the runtime never registered). Declaring const convIn = keyframes`...` and interpolating ${convIn} fixed it. Also: the template demo site keeps its form block in a campaign variant shown only with ?utm_source=meta, so a plain visit shows no form.",
       "addedAt": "2026-09-16"
+    },
+    {
+      "category": "shell",
+      "cli": "claude",
+      "summary": "A bash chain of the form a && b && for ...; done; git commit; git push runs the commit and push even when a fails: the semicolons after the loop break the && chain",
+      "detail": "Resolving a merge with node -e failed on a regex, but the git add/commit/push that followed the for loop ran anyway and pushed conflict markers. Put the whole sequence in one script with set -e, or gate the push on an explicit check (grep for <<<<<<< before committing).",
+      "addedAt": "2026-09-16"
     }
   ]
 }

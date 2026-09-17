@@ -1282,6 +1282,13 @@
       "summary": "Chromium taints a canvas drawn from a blob-URL SVG that contains a foreignObject; build the SVG as a data:image/svg+xml URL (encodeURIComponent) and the canvas stays exportable. Copy only paint properties from getComputedStyle into the clone: copying everything brings inset/right/bottom along and breaks the positions.",
       "detail": null,
       "addedAt": "2026-09-17"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "Never install Cadence silently (Cadence Setup.exe /S) from a detached script: the NSIS uninstall step removed %LOCALAPPDATA%\\Programs\\Cadence and the install never completed, leaving no Cadence.exe. Launch the wizard (node scripts/install-local.mjs) and let the person click through.",
+      "detail": null,
+      "addedAt": "2026-09-17"
     }
   ]
 }

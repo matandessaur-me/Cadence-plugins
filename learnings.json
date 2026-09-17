@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-16",
+  "updated": "2026-09-17",
   "learnings": [
     {
       "category": "cli-flags",
@@ -1275,6 +1275,13 @@
       "summary": "Patching files that contain backslash-quote escapes or accents from a bash heredoc into python or node -e is unreliable on Windows; write the patch script to a file with the Write tool, normalise CRLF before matching, and match accented spans with a wildcard.",
       "detail": "Three failed patch attempts on gen-content.mjs: python read stdin as cp1252, str.replace replaced every occurrence of a word, and a literal backslash-quote in the pattern never matched even when the bytes looked identical. What worked: a .mjs patch file, split on CR before matching, and a regex with a dot for the escaped quote.",
       "addedAt": "2026-09-16"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "Chromium taints a canvas drawn from a blob-URL SVG that contains a foreignObject; build the SVG as a data:image/svg+xml URL (encodeURIComponent) and the canvas stays exportable. Copy only paint properties from getComputedStyle into the clone: copying everything brings inset/right/bottom along and breaks the positions.",
+      "detail": null,
+      "addedAt": "2026-09-17"
     }
   ]
 }

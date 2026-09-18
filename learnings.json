@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-17",
+  "updated": "2026-09-18",
   "learnings": [
     {
       "category": "cli-flags",
@@ -1296,6 +1296,13 @@
       "summary": "A change regressed: Cadence builds, boots and answers only to x-cadence-token, and the cutover script adopts the previous install without losing Mind, notes or",
       "detail": "Claimed by term-mu1r91pe-1 on 2026-09-14 (adopt-previous-install.ts, cutover-to-cadence.mjs, logo.svg, electron-builder.yml). Checked 2026-09-17: Test failed (1): npm test. # skipped 1 # todo 0 # duration_ms 9754.0156",
       "addedAt": "2026-09-17"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "Contract unit updates take units:[{id,status,evidence}], not unit:{...}",
+      "detail": "POST /api/contracts/update returns ok:true and the whole contract even when the payload key is wrong, so a malformed update looks successful. Per-unit updates must be an ARRAY under \"units\"; status must be one of pending|in_progress|done|blocked (\"doing\" is silently ignored). Always read back the unit from the response to confirm the change landed.",
+      "addedAt": "2026-09-18"
     }
   ]
 }

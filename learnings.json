@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "learnings": [
     {
       "category": "cli-flags",
@@ -1303,6 +1303,13 @@
       "summary": "Contract unit updates take units:[{id,status,evidence}], not unit:{...}",
       "detail": "POST /api/contracts/update returns ok:true and the whole contract even when the payload key is wrong, so a malformed update looks successful. Per-unit updates must be an ARRAY under \"units\"; status must be one of pending|in_progress|done|blocked (\"doing\" is silently ignored). Always read back the unit from the response to confirm the change landed.",
       "addedAt": "2026-09-18"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change regressed: the template builds and the self-test passes; new sites are created from template/ with field-level locales and the features switchboard",
+      "detail": "Claimed by claude on 2026-09-11 (site.config.ts, hydrate.ts, new-site.mjs, verify.mjs, PLATFORM.md). Checked 2026-09-19: Test failed (1): node scripts/self-test.mjs --skip-build. }\r \r Node.js v22.14.0",
+      "addedAt": "2026-09-19"
     }
   ]
 }

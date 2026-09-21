@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-19",
+  "updated": "2026-09-21",
   "learnings": [
     {
       "category": "cli-flags",
@@ -1310,6 +1310,27 @@
       "summary": "A change regressed: the template builds and the self-test passes; new sites are created from template/ with field-level locales and the features switchboard",
       "detail": "Claimed by claude on 2026-09-11 (site.config.ts, hydrate.ts, new-site.mjs, verify.mjs, PLATFORM.md). Checked 2026-09-19: Test failed (1): node scripts/self-test.mjs --skip-build. }\r \r Node.js v22.14.0",
       "addedAt": "2026-09-19"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change was reverted: the Usimatech drafting-sheet wall and marquee loop stay as committed",
+      "detail": "Claimed by claude on 2026-09-17 (WorkshopWallView.tsx, FamilyMarqueeHero.tsx). Checked 2026-09-21: src/components/PageBuilder/components/WorkshopWall/WorkshopWallView.tsx no longer exists.",
+      "addedAt": "2026-09-21"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change was reverted: the Usimatech rail header and cork wall stay as committed",
+      "detail": "Claimed by claude on 2026-09-17 (Header.tsx, WorkshopWallView.tsx). Checked 2026-09-21: src/components/PageBuilder/components/WorkshopWall/WorkshopWallView.tsx no longer exists.",
+      "addedAt": "2026-09-21"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "motion/react: when prefers-reduced-motion switches on after hydration, passing {} instead of animation props leaves the element at its hidden initial style",
+      "detail": "A useSyncExternalStore reduce flag is false on the server and during hydration, so motion elements mount with initial opacity 0; when the flag flips to true and the component passes an empty props object, motion keeps the last inline style and the element never appears. Pass initial:false with animate at the resting values and a zero-duration transition instead.",
+      "addedAt": "2026-09-21"
     }
   ]
 }

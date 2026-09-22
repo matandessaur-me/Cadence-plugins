@@ -1380,6 +1380,13 @@
       "summary": "POST /api/browser/eval strips anything that looks like an HTML tag from the expression: a < followed by a letter up to the next > is removed, so for(let i=1;i<r.length;i++){...>0) becomes a SyntaxError (Unexpected token). Write comparisons as r.length>i, or compare differences to zero; < before a digit is safe.",
       "detail": "Seen 2026-09-22 while recording rAF timestamps in the in-app browser. The same expression with i<r.length replaced by r.length>i ran. Also a literal % in the expression (i%2) failed the same way; use i&1.",
       "addedAt": "2026-09-22"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "The per-actor in-app browser tab gets almost no requestAnimationFrame frames while it is not the tab on screen (measured 9 frames in 2.8s at phone emulation, 26 on desktop, with 1s holes), and GSAP lag smoothing then advances tweens 33ms per frame, so frame-driven motion crawls or stalls. Timing a CSS transition or a GSAP tween in that tab says nothing about the code; verify state instead (listener registered, tween created, render count moving) or check the frame rate first with an in-page rAF counter.",
+      "detail": "Seen 2026-09-22 debugging a menu pour: a tween that should take 0.8s took seconds, a 0.55s visibility delay took 1.7s, and the same sequence ran normally minutes earlier when frames were plentiful. document.visibilityState still says visible.",
+      "addedAt": "2026-09-22"
     }
   ]
 }

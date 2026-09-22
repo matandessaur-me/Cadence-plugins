@@ -1338,6 +1338,13 @@
       "summary": "SiteForge stage 04: a header and a multi-step form taken from the library and restyled were rejected by the owner as already used; the chrome and the lead form must be new mechanics per site, from the trade, and inner pages need a device each beyond hero plus list.",
       "detail": null,
       "addedAt": "2026-09-22"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A tactile device must not gate content: scratch-to-reveal promos were rejected by the owner because the offer was unreadable until you dragged. Reveal-on-entry or show the value and keep the gesture as a bonus.",
+      "detail": null,
+      "addedAt": "2026-09-22"
     }
   ]
 }

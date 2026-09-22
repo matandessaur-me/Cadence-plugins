@@ -1366,6 +1366,13 @@
       "summary": "A Sanity seed with createOrReplace never deletes documents an earlier seed wrote under other ids; renaming the id scheme doubles every collection on the live site.",
       "detail": "After changing how seed ids are built, query the dataset for the seeded types and delete every published id the new seed does not write (a transaction of deletes). The content audit counted 203 documents against 186 written; the 17 extras were the doubled dishes the owner saw.",
       "addedAt": "2026-09-22"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "After reverting source files, a Next.js build reused its Turbopack cache and shipped the reverted module: the chunk kept its hash and threw at runtime while tsc was clean.",
+      "detail": "Symptom on Le Saint-Bock: every page lost its blocks after hydration with a console ReferenceError (gsap is not defined) from a chunk whose name did not change between builds. git checkout of the files and two rebuilds did not help; rm -rf .next before the build did. Rule: after reverting or force-changing files under src, delete .next (not only .next/cache/fetch-cache) before rebuilding, and always read the browser console on one page after a rebuild.",
+      "addedAt": "2026-09-22"
     }
   ]
 }

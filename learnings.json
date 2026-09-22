@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "learnings": [
     {
       "category": "cli-flags",
@@ -1331,6 +1331,13 @@
       "summary": "motion/react: when prefers-reduced-motion switches on after hydration, passing {} instead of animation props leaves the element at its hidden initial style",
       "detail": "A useSyncExternalStore reduce flag is false on the server and during hydration, so motion elements mount with initial opacity 0; when the flag flips to true and the component passes an empty props object, motion keeps the last inline style and the element never appears. Pass initial:false with animate at the resting values and a zero-duration transition instead.",
       "addedAt": "2026-09-21"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "SiteForge stage 04: a header and a multi-step form taken from the library and restyled were rejected by the owner as already used; the chrome and the lead form must be new mechanics per site, from the trade, and inner pages need a device each beyond hero plus list.",
+      "detail": null,
+      "addedAt": "2026-09-22"
     }
   ]
 }

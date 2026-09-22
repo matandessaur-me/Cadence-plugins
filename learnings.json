@@ -1345,6 +1345,13 @@
       "summary": "A tactile device must not gate content: scratch-to-reveal promos were rejected by the owner because the offer was unreadable until you dragged. Reveal-on-entry or show the value and keep the gesture as a bonus.",
       "detail": null,
       "addedAt": "2026-09-22"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "Generated site blocks default to a hairline under every row and an uppercase mono label above every heading; the owner reads this as AI-made.",
+      "detail": "The taste skill bans both (spec-sheet rule, eyebrow restraint) but nothing in the SiteForge component stage enforces it. Group rows with spacing, keep 1px lines only where they are content (inputs, buttons, current-page underline), write labels as small mono words. Grep border-top|border-bottom|var(--rule)|text-transform: uppercase across src/components before a review and justify or remove each hit.",
+      "addedAt": "2026-09-22"
     }
   ]
 }

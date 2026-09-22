@@ -1387,6 +1387,13 @@
       "summary": "The per-actor in-app browser tab gets almost no requestAnimationFrame frames while it is not the tab on screen (measured 9 frames in 2.8s at phone emulation, 26 on desktop, with 1s holes), and GSAP lag smoothing then advances tweens 33ms per frame, so frame-driven motion crawls or stalls. Timing a CSS transition or a GSAP tween in that tab says nothing about the code; verify state instead (listener registered, tween created, render count moving) or check the frame rate first with an in-page rAF counter.",
       "detail": "Seen 2026-09-22 debugging a menu pour: a tween that should take 0.8s took seconds, a 0.55s visibility delay took 1.7s, and the same sequence ran normally minutes earlier when frames were plentiful. document.visibilityState still says visible.",
       "addedAt": "2026-09-22"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A React block that pins with GSAP ScrollTrigger must read prefers-reduced-motion from window.matchMedia inside the effect, not only from a useSyncExternalStore hook: through hydration the hook returns the server snapshot (false), the effect builds the pin (GSAP wraps the stage in a pin-spacer), then the hook flips to true and the re-render to the static markup throws NotFoundError removeChild and the page falls to the error boundary. Verify pinned pages with emulate/media reducedMotion reduce.",
+      "detail": "Le Saint-Bock home, 2026-09-22: 5 blocks and no error with reduced motion off; 0 blocks and Something went wrong with it on, both on the local build and the live site. Fixed by reading the media query in WordmarkWindow and CandyRooms effects before pinning. Found because scripts/shoot-previews.mjs left the shell tab in reduced-motion emulation.",
+      "addedAt": "2026-09-22"
     }
   ]
 }

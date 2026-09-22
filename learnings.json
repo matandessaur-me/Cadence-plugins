@@ -1373,6 +1373,13 @@
       "summary": "After reverting source files, a Next.js build reused its Turbopack cache and shipped the reverted module: the chunk kept its hash and threw at runtime while tsc was clean.",
       "detail": "Symptom on Le Saint-Bock: every page lost its blocks after hydration with a console ReferenceError (gsap is not defined) from a chunk whose name did not change between builds. git checkout of the files and two rebuilds did not help; rm -rf .next before the build did. Rule: after reverting or force-changing files under src, delete .next (not only .next/cache/fetch-cache) before rebuilding, and always read the browser console on one page after a rebuild.",
       "addedAt": "2026-09-22"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "POST /api/browser/eval strips anything that looks like an HTML tag from the expression: a < followed by a letter up to the next > is removed, so for(let i=1;i<r.length;i++){...>0) becomes a SyntaxError (Unexpected token). Write comparisons as r.length>i, or compare differences to zero; < before a digit is safe.",
+      "detail": "Seen 2026-09-22 while recording rAF timestamps in the in-app browser. The same expression with i<r.length replaced by r.length>i ran. Also a literal % in the expression (i%2) failed the same way; use i&1.",
+      "addedAt": "2026-09-22"
     }
   ]
 }

@@ -1359,6 +1359,13 @@
       "summary": "Next.js data cache in .next/cache/fetch-cache survives rebuilds: after re-seeding Sanity locally, a production server keeps serving the old documents.",
       "detail": "Seeding Sanity does not touch the site. Either clear .next/cache/fetch-cache before next start, or call the site /api/revalidate route with a Sanity webhook signature (encodeSignatureHeader from @sanity/webhook with a non-empty body; the secret must match the one the running process loaded). A hand-rolled HMAC was rejected; do not guess the format.",
       "addedAt": "2026-09-22"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "A Sanity seed with createOrReplace never deletes documents an earlier seed wrote under other ids; renaming the id scheme doubles every collection on the live site.",
+      "detail": "After changing how seed ids are built, query the dataset for the seeded types and delete every published id the new seed does not write (a transaction of deletes). The content audit counted 203 documents against 186 written; the 17 extras were the doubled dishes the owner saw.",
+      "addedAt": "2026-09-22"
     }
   ]
 }

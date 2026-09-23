@@ -1478,6 +1478,13 @@
       "summary": "Claude Code 2.1.281 hooks, verified by experiment: a Stop hook blocks only when it is synchronous (async:true can never block); printing {\"decision\":\"block\",\"reason\":\"...\"} on stdout makes Claude follow the reason and stop again with stop_hook_active:true. A failed Bash call fires PostToolUseFailure (not PostToolUse) with error \"Exit code N\n<output>\"; a successful one fires PostToolUse with tool_response {stdout, stderr, interrupted, isImage, noOutputExpected} and no exit code. Every event of one turn carries the same prompt_id.",
       "detail": "Experiment 2026-09-23 with claude -p --settings <file> and a dump hook: run A (sync Stop, block once) took 5 turns and ran the command named in the reason; run B (async Stop) ignored the block and finished in 3 turns. Stop payload fields: stop_hook_active, last_assistant_message, background_tasks, session_crons, prompt_id, permission_mode. Write PostToolUse tool_response: {type:create, filePath, content, structuredPatch, originalFile, userModified}. Cadence players/hooks.ts installs Stop with async:true and does not list PostToolUseFailure, so it can neither refuse a finish nor see a failed check.",
       "addedAt": "2026-09-23"
+    },
+    {
+      "category": "platform",
+      "cli": null,
+      "summary": "A scratch Cadence server (scripts/test-server.mjs, its own --data-dir) rewrites the person's GLOBAL ~/.codex/hooks.json, ~/.copilot/hooks/cadence.json and ~/.grok/settings.json at boot to point at its own Temp relay: repairStaleRelays treated any entry naming another install's relay as stale.",
+      "detail": "Seen 2026-09-23 while testing the alpha.6 verification gate: the boot log said repointed codex/copilot/grok hooks at this install. Fixed on feature/alpha6-verify-gate in players/hooks.ts isStaleRelay: an entry at another install is stale only when that relay file no longer exists. Before starting any scratch server from an older build, snapshot those three files and compare after.",
+      "addedAt": "2026-09-23"
     }
   ]
 }

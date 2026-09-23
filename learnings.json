@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "learnings": [
     {
       "category": "cli-flags",
@@ -1401,6 +1401,27 @@
       "summary": "Git Bash (MSYS) rewrites a command argument that is a lone / or starts with / into a Windows path (a bare / becomes C:/Program Files/Git/), so a script taking URL paths such as --pages \"/\" or \"/,/bieres\" receives garbage and silently skips that page. Prefix the command with MSYS_NO_PATHCONV=1 (or run it from PowerShell).",
       "detail": "Seen 2026-09-22 with SiteForge scripts/shoot-previews.mjs: the home page was never photographed in two runs and the diagnostic printed the route as C:/Program Files/Git/. With MSYS_NO_PATHCONV=1 the route arrived as /.",
       "addedAt": "2026-09-22"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change regressed: the template typechecks with the eight primitives and ladder.mjs scores a served site",
+      "detail": "Claimed by claude on 2026-09-16 (ladder.mjs, PinnedScene.tsx, Track.tsx). Checked 2026-09-23: scripts/ladder.mjs changed since: m8n-matandessaur 0.3.0: the anti-tell contract, and a lint that reads it; m8n-matandessaur ladder: browser errors are reported, and small uppercase tracked labels count as details in the margins; m8n-matandessaur Hotel Le Roberval: brief, plan (Magazine Frame on paper), sitemap, components, harvest; ladder ignores wide grids (+1).",
+      "addedAt": "2026-09-23"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change regressed: native.mjs runs against a served site and the template typechecks with the conversation form and the new hero",
+      "detail": "Claimed by claude on 2026-09-16 (native.mjs, FormRenderer.tsx, Hero.tsx). Checked 2026-09-23: Test failed (1): cd template && npx tsc --noEmit. src/lib/gsap.ts(16,57): error TS2307: Cannot find module 'gsap/ScrollTrigger' or its corresponding type declarations.\r src/lib/gsap.ts(30,34): error TS2307: Cannot find module 'gsap' or its corresponding type declarations.\r src/lib/gsap.ts(30,50): error TS2307: Cannot find module 'gsap/ScrollTrigger",
+      "addedAt": "2026-09-23"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change regressed: the template typechecks with the motion kit and the brief schema carries the creative block",
+      "detail": "Claimed by claude on 2026-09-16 (motion.ts, Reveal.tsx, NATIVE_CONTRACT.md, brief.schema.json). Checked 2026-09-23: Test failed (1): cd template && npx tsc --noEmit. src/lib/gsap.ts(16,57): error TS2307: Cannot find module 'gsap/ScrollTrigger' or its corresponding type declarations.\r src/lib/gsap.ts(30,34): error TS2307: Cannot find module 'gsap' or its corresponding type declarations.\r src/lib/gsap.ts(30,50): error TS2307: Cannot find module 'gsap/ScrollTrigger",
+      "addedAt": "2026-09-23"
     }
   ]
 }

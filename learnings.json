@@ -1422,6 +1422,13 @@
       "summary": "A change regressed: the template typechecks with the motion kit and the brief schema carries the creative block",
       "detail": "Claimed by claude on 2026-09-16 (motion.ts, Reveal.tsx, NATIVE_CONTRACT.md, brief.schema.json). Checked 2026-09-23: Test failed (1): cd template && npx tsc --noEmit. src/lib/gsap.ts(16,57): error TS2307: Cannot find module 'gsap/ScrollTrigger' or its corresponding type declarations.\r src/lib/gsap.ts(30,34): error TS2307: Cannot find module 'gsap' or its corresponding type declarations.\r src/lib/gsap.ts(30,50): error TS2307: Cannot find module 'gsap/ScrollTrigger",
       "addedAt": "2026-09-23"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "SiteForge template imported gsap in src/lib/gsap.ts without listing it in template/package.json, so every new scaffold failed its first build (TS2307 gsap). Fixed 2026-09-23 by adding gsap ^3.15.0 to the template dependencies; a scaffold must run npm run build before stage 02.",
+      "detail": null,
+      "addedAt": "2026-09-23"
     }
   ]
 }

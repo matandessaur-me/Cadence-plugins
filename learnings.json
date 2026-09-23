@@ -1436,6 +1436,13 @@
       "summary": "SiteForge design plan built around trade-object gadgets (a key cut by the scroll, a switch-row question, key-tag cards with holes) was rejected outright by the owner as goofy and AI-looking (piche-j-fils, 2026-09-23). A plan that turns the trade into a toy is not a register; classy means photography, type and calm, with interactions a visitor expects.",
       "detail": null,
       "addedAt": "2026-09-23"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "SiteForge scaffold-component declares every string field as localeString; plain values (phone, size, a variant) must be switched to type string or verify reports the content does not match the schema.",
+      "detail": null,
+      "addedAt": "2026-09-23"
     }
   ]
 }

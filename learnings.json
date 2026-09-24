@@ -1513,6 +1513,13 @@
       "summary": "Never walk a repository with readdirSync/readFileSync inside a server route: one big checkout froze every shell for 72 s",
       "detail": "The files grep route read the whole tree synchronously and stopped only after a match, so a search with no hits blocked the event loop; health checks stalled 60 s and shells dropped. Search git repositories with git grep in a child process, and walk anything else with awaited fs.promises calls under a time and file budget.",
       "addedAt": "2026-09-24"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "emulate/device does not resize the in-app webview; screenshots at a larger width come back as the smaller page tiled",
+      "detail": "POST /api/browser/emulate/device returned ok with width 1900 but GET /api/browser/screenshot produced the 1024-wide page repeated across the frame, at both dpr 1 and dpr 2. Real-width layout verification needs another route.",
+      "addedAt": "2026-09-24"
     }
   ]
 }

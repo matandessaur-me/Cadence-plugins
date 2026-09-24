@@ -1492,6 +1492,20 @@
       "summary": "Node 22: a request whose body was read reports req.destroyed true, which does not mean the caller hung up",
       "detail": "http IncomingMessage auto-destroys after end, so (req.destroyed || req.socket.destroyed) is true for every request once the body is parsed. To know the caller went away before answering, check req.socket.destroyed, res.destroyed or res.writableEnded, or listen for res close before finish. Using req.destroyed silently dropped every answer meant for a waiting hook relay.",
       "addedAt": "2026-09-24"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "Python open(path, \"w\") on Windows writes CRLF; editing an LF repo that way converts whole files",
+      "detail": "Use open(path, \"w\", newline=\"\") or read and write bytes when a script edits source files. Git with text=auto eol=lf hides it in the commit but the working copies stay CRLF and git status flags them until re-added.",
+      "addedAt": "2026-09-24"
+    },
+    {
+      "category": "cli-flags",
+      "cli": "claude",
+      "summary": "The commit gate re-checks the exact command text that failed; rerun that same command plainly, unpiped and unredirected",
+      "detail": "A pipe to tail or grep, a redirect to a file, or a loop around npm test is not counted. When the gate names the covering checks per file (npm run build:server && npm test, npm run build -w @cadence/web), run each exactly as named with its output visible, then commit.",
+      "addedAt": "2026-09-24"
     }
   ]
 }

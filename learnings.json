@@ -1590,6 +1590,13 @@
       "summary": "A change regressed: The designer sidebar opens on one catalog request and /api/products/catalog/products answers in under 50 ms warm with no Builder re-read",
       "detail": "Claimed by claude on 2026-09-22 (designerBrowserCache.ts, route.ts, designerBrowser.ts). Checked 2026-09-25: Test failed (1): npx vitest run src/lib/catalog/designerBrowserCache.test.ts src/app/api/products/catalog/products/route.cache.test.ts src/components/designer/bf/BfConfigureSidebar.oneRequest.test.tsx. \u001b[2mfilter: \u001b[22m\u001b[33msrc/lib/catalog/designerBrowserCache.test.ts\u001b[2m, \u001b[22msrc/app/api/products/catalog/products/route.cache.test.ts\u001b[2m, \u001b[22msrc/components/designer/bf/BfConfigureSidebar.oneRequest.test.tsx\u001b[39m \u001b[2minclude: \u001b[22m\u001b[33msrc/**/__tests__/**/*.test.{ts,tsx}\u001b[2m, \u001b[22msrc/**/*.test.{",
       "addedAt": "2026-09-25"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change was reverted: The summary page scrolls normally when the pointer is over the design canvas, and the unsaved-guard test file no longer fails in full-suite",
+      "detail": "Claimed by claude on 2026-09-22 (BfDesignerCanvasView.tsx, BfDesignerCanvasView.wheel.test.tsx, DesignerStudioScreen.unsavedGuard.test.tsx). Checked 2026-09-25: src/screens/designer/DesignerStudioScreen.unsavedGuard.test.tsx no longer exists.",
+      "addedAt": "2026-09-25"
     }
   ]
 }

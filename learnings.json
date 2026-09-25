@@ -1583,6 +1583,13 @@
       "summary": "GitHub refuses PUT /repos/{owner}/{repo}/pulls/{n}/merge with 403 \"Merging stacked PRs via this endpoint is not supported. Use the asynchronous merge endpoint instead.\" when the PR is part of a stack (another open PR targets its head branch). The Cadence github plugin 0.7.1 wraps only the synchronous endpoint, so POST /api/github/pulls/merge returns 502 with that message nested inside. Approve and review routes are unaffected. Merge a stacked PR from the GitHub UI, or wrap the merge-async endpoint.",
       "detail": null,
       "addedAt": "2026-09-25"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change regressed: The designer sidebar opens on one catalog request and /api/products/catalog/products answers in under 50 ms warm with no Builder re-read",
+      "detail": "Claimed by claude on 2026-09-22 (designerBrowserCache.ts, route.ts, designerBrowser.ts). Checked 2026-09-25: Test failed (1): npx vitest run src/lib/catalog/designerBrowserCache.test.ts src/app/api/products/catalog/products/route.cache.test.ts src/components/designer/bf/BfConfigureSidebar.oneRequest.test.tsx. \u001b[2mfilter: \u001b[22m\u001b[33msrc/lib/catalog/designerBrowserCache.test.ts\u001b[2m, \u001b[22msrc/app/api/products/catalog/products/route.cache.test.ts\u001b[2m, \u001b[22msrc/components/designer/bf/BfConfigureSidebar.oneRequest.test.tsx\u001b[39m \u001b[2minclude: \u001b[22m\u001b[33msrc/**/__tests__/**/*.test.{ts,tsx}\u001b[2m, \u001b[22msrc/**/*.test.{",
+      "addedAt": "2026-09-25"
     }
   ]
 }

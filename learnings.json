@@ -1527,6 +1527,13 @@
       "summary": "A shell opened by the Cadence desktop app inherits ELECTRON_RUN_AS_NODE=1; unset it (env -u ELECTRON_RUN_AS_NODE) before starting Electron from that shell, or it runs as plain Node and fails on the app entry.",
       "detail": null,
       "addedAt": "2026-09-25"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "In the in-app browser, press-key Enter does not submit the Wikipedia (Vector 2022) search form, and at 1024px the search input is hidden until the #p-search icon is clicked. Click the icon, type, then click-index the form submit button. Send eval expressions from a file built with JSON.stringify to avoid escaping errors.",
+      "detail": null,
+      "addedAt": "2026-09-25"
     }
   ]
 }

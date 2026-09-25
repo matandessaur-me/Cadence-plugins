@@ -1534,6 +1534,34 @@
       "summary": "In the in-app browser, press-key Enter does not submit the Wikipedia (Vector 2022) search form, and at 1024px the search input is hidden until the #p-search icon is clicked. Click the icon, type, then click-index the form submit button. Send eval expressions from a file built with JSON.stringify to avoid escaping errors.",
       "detail": null,
       "addedAt": "2026-09-25"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "A shell opened by Cadence carries CADENCE_WEB_DIST pointing at the INSTALLED renderer; a from-source server started from that shell serves the old UI. Unset CADENCE_WEB_DIST (and CADENCE_TOKEN, CADENCE_API, ELECTRON_RUN_AS_NODE) before starting a dev server to test a rebuilt renderer.",
+      "detail": null,
+      "addedAt": "2026-09-25"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "kokoro-js in the browser is slower than real time (single-thread WASM about 1.8x, WebGPU on an integrated GPU no better, fp32 WebGPU failed, DirectML in onnxruntime-node failed). fp32 on onnxruntime-node CPU runs at about 0.27x real time with 0.6 s to the first phrase; q8 on CPU is slower than fp32. Run Kokoro natively in a child process, not in the renderer.",
+      "detail": null,
+      "addedAt": "2026-09-25"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "whisper-server accepts audio_ctx per request. For speech under about 12 s, audio_ctx=768 halves latency (about 0.45 s for a short command on base) without losing words; 384 makes it loop and repeat the sentence. Keep a floor of about 10 s of window.",
+      "detail": null,
+      "addedAt": "2026-09-25"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "POST /api/browser/eval does not await a returned promise (it answers {} for an async IIFE). Store async results on window and read them with a second eval.",
+      "detail": null,
+      "addedAt": "2026-09-25"
     }
   ]
 }

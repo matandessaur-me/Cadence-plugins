@@ -1562,6 +1562,13 @@
       "summary": "POST /api/browser/eval does not await a returned promise (it answers {} for an async IIFE). Store async results on window and read them with a second eval.",
       "detail": null,
       "addedAt": "2026-09-25"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "electron-builder --publish always can fail mid-upload with GitHub 422 \"Published releases must have a valid tag\" after creating the release and uploading both exes: the blockmap and latest.yml are then missing and release/latest.yml is left stale from the previous version, and scripts/release.mjs stops before the packaged smoke test. Recover by generating latest.yml (sha512 base64 and size of the Setup exe), uploading it and the blockmap to the existing release, then running check:secrets and test:packaged. Another time it creates a draft instead, which must be published by PATCHing draft:false.",
+      "detail": null,
+      "addedAt": "2026-09-25"
     }
   ]
 }

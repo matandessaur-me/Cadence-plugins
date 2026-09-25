@@ -1576,6 +1576,13 @@
       "summary": "Stopping a background bash task does not stop the node server it started",
       "detail": "TaskStop on a background bash wrapper killed only the shell; the node server kept the port, so later restarts silently failed and tests ran against old server code. Before trusting a restart, check who owns the port (Get-NetTCPConnection -LocalPort N) and stop that process.",
       "addedAt": "2026-09-25"
+    },
+    {
+      "category": "api-pattern",
+      "cli": "claude",
+      "summary": "GitHub refuses PUT /repos/{owner}/{repo}/pulls/{n}/merge with 403 \"Merging stacked PRs via this endpoint is not supported. Use the asynchronous merge endpoint instead.\" when the PR is part of a stack (another open PR targets its head branch). The Cadence github plugin 0.7.1 wraps only the synchronous endpoint, so POST /api/github/pulls/merge returns 502 with that message nested inside. Approve and review routes are unaffected. Merge a stacked PR from the GitHub UI, or wrap the merge-async endpoint.",
+      "detail": null,
+      "addedAt": "2026-09-25"
     }
   ]
 }

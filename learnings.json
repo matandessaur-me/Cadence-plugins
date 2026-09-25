@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-24",
+  "updated": "2026-09-25",
   "learnings": [
     {
       "category": "cli-flags",
@@ -1520,6 +1520,13 @@
       "summary": "emulate/device does not resize the in-app webview; screenshots at a larger width come back as the smaller page tiled",
       "detail": "POST /api/browser/emulate/device returned ok with width 1900 but GET /api/browser/screenshot produced the 1024-wide page repeated across the frame, at both dpr 1 and dpr 2. Real-width layout verification needs another route.",
       "addedAt": "2026-09-24"
+    },
+    {
+      "category": "platform",
+      "cli": "claude",
+      "summary": "A shell opened by the Cadence desktop app inherits ELECTRON_RUN_AS_NODE=1; unset it (env -u ELECTRON_RUN_AS_NODE) before starting Electron from that shell, or it runs as plain Node and fails on the app entry.",
+      "detail": null,
+      "addedAt": "2026-09-25"
     }
   ]
 }

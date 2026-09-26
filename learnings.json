@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-25",
+  "updated": "2026-09-26",
   "learnings": [
     {
       "category": "cli-flags",
@@ -1597,6 +1597,27 @@
       "summary": "A change was reverted: The summary page scrolls normally when the pointer is over the design canvas, and the unsaved-guard test file no longer fails in full-suite",
       "detail": "Claimed by claude on 2026-09-22 (BfDesignerCanvasView.tsx, BfDesignerCanvasView.wheel.test.tsx, DesignerStudioScreen.unsavedGuard.test.tsx). Checked 2026-09-25: src/screens/designer/DesignerStudioScreen.unsavedGuard.test.tsx no longer exists.",
       "addedAt": "2026-09-25"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change was reverted: the family catalogue filters reflow the tiles and the emergency room number fits a 390px phone without horizontal overflow",
+      "detail": "Claimed by claude on 2026-09-23 (FamilyCatalogue.tsx, EmergencyRoom.tsx, StoreOpenNow.ts). Checked 2026-09-26: src/components/PageBuilder/components/FamilyCatalogue/FamilyCatalogue.tsx no longer exists.",
+      "addedAt": "2026-09-26"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change was reverted: the key cut hero pins and cuts seven notches by scroll, and the service chapters read the service collection through the serviceChapters pro",
+      "detail": "Claimed by claude on 2026-09-23 (KeyCutHero.tsx, ServiceChapters.tsx, componentQueries.ts). Checked 2026-09-26: src/components/PageBuilder/components/KeyCutHero/KeyCutHero.tsx no longer exists.",
+      "addedAt": "2026-09-26"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change was reverted: the services blocks of J. Piche & Fils typecheck, pass lint-slop and render at 390 without horizontal overflow",
+      "detail": "Claimed by claude on 2026-09-23 (DialOpener.tsx, MasterKeyTree.tsx, ServiceIndex.tsx). Checked 2026-09-26: src/components/PageBuilder/components/DialOpener/DialOpener.tsx no longer exists.",
+      "addedAt": "2026-09-26"
     }
   ]
 }

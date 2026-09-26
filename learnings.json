@@ -1618,6 +1618,13 @@
       "summary": "A change was reverted: the services blocks of J. Piche & Fils typecheck, pass lint-slop and render at 390 without horizontal overflow",
       "detail": "Claimed by claude on 2026-09-23 (DialOpener.tsx, MasterKeyTree.tsx, ServiceIndex.tsx). Checked 2026-09-26: src/components/PageBuilder/components/DialOpener/DialOpener.tsx no longer exists.",
       "addedAt": "2026-09-26"
+    },
+    {
+      "category": "shell",
+      "cli": "claude",
+      "summary": "Patch scripts written through a Bash heredoc lose regex backslashes (\b became a backspace char)",
+      "detail": "Write .cjs patch scripts with the Write tool and put code in String.raw templates; scan edited files for control characters before building.",
+      "addedAt": "2026-09-26"
     }
   ]
 }

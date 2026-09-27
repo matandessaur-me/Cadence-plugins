@@ -1632,6 +1632,13 @@
       "summary": "electron-builder --publish to GitHub races on create-release (422 valid tag) and drops the exe uploads",
       "detail": "Seen on two releases in a row. Finish by hand: run check:secrets and test:packaged, upload the missing exes via the release upload_url, verify the Setup sha512, then write and upload latest.yml with the blockmap.",
       "addedAt": "2026-09-27"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "Never run a long child process with spawnSync/execSync inside the server",
+      "detail": "outcomes.ts ran claim tests with spawnSync and blocked the event loop for 49 s at boot, stalling voice transcription. Use async spawn and serialize runs.",
+      "addedAt": "2026-09-27"
     }
   ]
 }

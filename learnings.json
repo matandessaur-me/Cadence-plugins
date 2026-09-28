@@ -1737,6 +1737,13 @@
       "summary": "A change was reverted: Hands-free conversation stays open until goodbye and only the resident Cadence speaks",
       "detail": "Claimed by cadence-voice on 2026-09-25 (voice.ts, residentBrief.ts, voice.ts). Checked 2026-09-28: apps/web/src/features/voice/residentBrief.ts no longer exists.",
       "addedAt": "2026-09-28"
+    },
+    {
+      "category": "general",
+      "cli": "term-muhch0j3-1",
+      "summary": "A change was reverted: shipped 068357c after npm run typecheck, npm run lint, npm run build passed",
+      "detail": "Claimed by term-muhch0j3-1 on 2026-09-25 (next-env.d.ts, layout.tsx, page.tsx, Scenarios.tsx, useEstimator.ts). Checked 2026-09-28: src/app/debug/scenarios/Scenarios.tsx no longer exists.",
+      "addedAt": "2026-09-28"
     }
   ]
 }

@@ -1646,6 +1646,13 @@
       "summary": "A change was reverted: Hands-free Talk to Cadence only reacts after the word Cadence and the resident answers with context of the screen",
       "detail": "Claimed by term-mugtqj3e-2 on 2026-09-25 (voice.ts, residentBrief.ts, service.ts). Checked 2026-09-28: apps/web/src/features/voice/residentBrief.ts no longer exists.",
       "addedAt": "2026-09-28"
+    },
+    {
+      "category": "general",
+      "cli": "term-mugsc3aq-2",
+      "summary": "A change regressed: Talk to Cadence on a focused agent shell tells that agent instead of opening a new shell; answer options match the terminal menu",
+      "detail": "Claimed by term-mugsc3aq-2 on 2026-09-25 (command.ts, status.ts, VoiceControls.tsx). Checked 2026-09-28: Test failed (1): npm run build:server && npm test. # skipped 1 # todo 0 # duration_ms 15183.4411",
+      "addedAt": "2026-09-28"
     }
   ]
 }

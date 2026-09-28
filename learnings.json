@@ -1723,6 +1723,13 @@
       "summary": "A change regressed: The DYOB3 flow rail draws exactly four steps on every screen and every market, and no tick rests on the store's leadSubmitted",
       "detail": "Claimed by claude on 2026-09-23 (steps.ts, useFlowRail.ts, StepRail.tsx, SummaryScreen.tsx). Checked 2026-09-28: Test failed (1): npx vitest run. \u001b[2m      Tests \u001b[22m \u001b[1m\u001b[31m10 failed\u001b[39m\u001b[22m\u001b[2m | \u001b[22m\u001b[1m\u001b[32m1429 passed\u001b[39m\u001b[22m\u001b[90m (1439)\u001b[39m \u001b[2m   Start at \u001b[22m 13:34:13 \u001b[2m   Duration \u001b[22m 103.00s\u001b[2m (transform 52.33s, setup 620.32s, import 178.97s, tests 63.28s, environment 1291.16s)\u001b[22m",
       "addedAt": "2026-09-28"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change regressed: The designer CTA reads Next: <category> and opens that category while the room is incomplete, and Review my selection once it is complete; n",
+      "detail": "Claimed by claude on 2026-09-23 (BfConfigureSidebar.tsx, DesignerStudioScreen.tsx, designerCopy.ts). Checked 2026-09-28: Test failed (1): npx vitest run. \u001b[2m      Tests \u001b[22m \u001b[1m\u001b[31m10 failed\u001b[39m\u001b[22m\u001b[2m | \u001b[22m\u001b[1m\u001b[32m1429 passed\u001b[39m\u001b[22m\u001b[90m (1439)\u001b[39m \u001b[2m   Start at \u001b[22m 13:35:58 \u001b[2m   Duration \u001b[22m 37.02s\u001b[2m (transform 32.82s, setup 191.49s, import 70.75s, tests 63.20s, environment 387.77s)\u001b[22m",
+      "addedAt": "2026-09-28"
     }
   ]
 }

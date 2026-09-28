@@ -1688,6 +1688,20 @@
       "summary": "A change regressed: Tub-to-shower conversions no longer carry the old tub spout or an unselected hand shower into the render",
       "detail": "Claimed by claude on 2026-09-19 (tubDemolition.ts, verify.ts, route.ts). Checked 2026-09-28: Test failed (1): npx vitest run src/lib/pipeline/tubDemolition.test.ts. \u001b[2mfilter: \u001b[22m\u001b[33msrc/lib/pipeline/tubDemolition.test.ts\u001b[39m \u001b[2minclude: \u001b[22m\u001b[33msrc/**/__tests__/**/*.test.{ts,tsx}\u001b[2m, \u001b[22msrc/**/*.test.{ts,tsx}\u001b[2m, \u001b[22mtest/**/*.test.{ts,tsx}\u001b[39m \u001b[2mexclude:  \u001b[22m\u001b[33mnode_modules\u001b[2m, \u001b[22m.next\u001b[2m, \u001b[22mdist\u001b[2m, \u001b[22mtest/e2e/**\u001b[39m",
       "addedAt": "2026-09-28"
+    },
+    {
+      "category": "general",
+      "cli": "term-mugxfhm0-2",
+      "summary": "A change was reverted: Talk to Cadence hands work over invisibly, keeps the conversation going without the name, and narrates in task-relevant words",
+      "detail": "Claimed by term-mugxfhm0-2 on 2026-09-25 (voice.ts, residentBrief.ts, voice.ts, ConductorChat.tsx). Checked 2026-09-28: apps/web/src/features/voice/residentBrief.ts no longer exists.",
+      "addedAt": "2026-09-28"
+    },
+    {
+      "category": "general",
+      "cli": "term-mugxfhm0-2",
+      "summary": "A change was reverted: The voice persona is in the resident's system prompt, not typed; a reply ending in a question reopens the mic; the resident narrates in natu",
+      "detail": "Claimed by term-mugxfhm0-2 on 2026-09-25 (service.ts, voice.ts, residentBrief.ts, voice.ts, Workbench.tsx). Checked 2026-09-28: apps/web/src/features/voice/residentBrief.ts no longer exists.",
+      "addedAt": "2026-09-28"
     }
   ]
 }

@@ -1667,6 +1667,13 @@
       "summary": "A change regressed: Cadence has no Jev code and the decision layer still works locally",
       "detail": "Claimed by term-mufv59io-1 on 2026-09-24 (service.ts, prompt-pass.ts, config.ts). Checked 2026-09-28: Test failed (1): npm test. # skipped 1 # todo 0 # duration_ms 19377.0749",
       "addedAt": "2026-09-28"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change regressed: The gallery's Start designing links point at /product/ and a returning visitor is no longer dropped into an old project",
+      "detail": "Claimed by claude on 2026-09-23 (GalleryScreen.tsx). Checked 2026-09-28: Test failed (1): npx vitest run src/screens/gallery. \u001b[2mfilter: \u001b[22m\u001b[33msrc/screens/gallery\u001b[39m \u001b[2minclude: \u001b[22m\u001b[33msrc/**/__tests__/**/*.test.{ts,tsx}\u001b[2m, \u001b[22msrc/**/*.test.{ts,tsx}\u001b[2m, \u001b[22mtest/**/*.test.{ts,tsx}\u001b[39m \u001b[2mexclude:  \u001b[22m\u001b[33mnode_modules\u001b[2m, \u001b[22m.next\u001b[2m, \u001b[22mdist\u001b[2m, \u001b[22mtest/e2e/**\u001b[39m",
+      "addedAt": "2026-09-28"
     }
   ]
 }

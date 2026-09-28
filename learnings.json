@@ -1730,6 +1730,13 @@
       "summary": "A change regressed: The designer CTA reads Next: <category> and opens that category while the room is incomplete, and Review my selection once it is complete; n",
       "detail": "Claimed by claude on 2026-09-23 (BfConfigureSidebar.tsx, DesignerStudioScreen.tsx, designerCopy.ts). Checked 2026-09-28: Test failed (1): npx vitest run. \u001b[2m      Tests \u001b[22m \u001b[1m\u001b[31m10 failed\u001b[39m\u001b[22m\u001b[2m | \u001b[22m\u001b[1m\u001b[32m1429 passed\u001b[39m\u001b[22m\u001b[90m (1439)\u001b[39m \u001b[2m   Start at \u001b[22m 13:35:58 \u001b[2m   Duration \u001b[22m 37.02s\u001b[2m (transform 32.82s, setup 191.49s, import 70.75s, tests 63.20s, environment 387.77s)\u001b[22m",
       "addedAt": "2026-09-28"
+    },
+    {
+      "category": "general",
+      "cli": "cadence-voice",
+      "summary": "A change was reverted: Hands-free conversation stays open until goodbye and only the resident Cadence speaks",
+      "detail": "Claimed by cadence-voice on 2026-09-25 (voice.ts, residentBrief.ts, voice.ts). Checked 2026-09-28: apps/web/src/features/voice/residentBrief.ts no longer exists.",
+      "addedAt": "2026-09-28"
     }
   ]
 }

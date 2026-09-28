@@ -1709,6 +1709,13 @@
       "summary": "node-pty on Windows 11 flashes a Windows Terminal window per shell when Terminal is the default console",
       "detail": "Pass useConptyDll: true to pty.spawn so node-pty uses its bundled conpty.dll and OpenConsole.exe instead of the inbox ConPTY, which delegates to the default terminal. Proven A/B with a visible-window watcher.",
       "addedAt": "2026-09-28"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change regressed: The step rail advances About You -> Schedule/Render -> Confirmation through the summary's booking form, and drops Schedule in the same frame",
+      "detail": "Claimed by claude on 2026-09-23 (BookingMultiStep.tsx, useFlowRail.ts, SummaryScreen.tsx). Checked 2026-09-28: Test failed (1): npx vitest run src/components/booking/BookingMultiStep.rail.test.ts src/screens/summary/SummaryScreen.bookingRail.test.tsx. \u001b[2mfilter: \u001b[22m\u001b[33msrc/components/booking/BookingMultiStep.rail.test.ts\u001b[2m, \u001b[22msrc/screens/summary/SummaryScreen.bookingRail.test.tsx\u001b[39m \u001b[2minclude: \u001b[22m\u001b[33msrc/**/__tests__/**/*.test.{ts,tsx}\u001b[2m, \u001b[22msrc/**/*.test.{ts,tsx}\u001b[2m, \u001b[22mtest/**/*.test.{ts,tsx}\u001b[2m, \u001b[22mtools/**/*.test.{ts",
+      "addedAt": "2026-09-28"
     }
   ]
 }

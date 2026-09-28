@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-27",
+  "updated": "2026-09-28",
   "learnings": [
     {
       "category": "cli-flags",
@@ -1639,6 +1639,13 @@
       "summary": "Never run a long child process with spawnSync/execSync inside the server",
       "detail": "outcomes.ts ran claim tests with spawnSync and blocked the event loop for 49 s at boot, stalling voice transcription. Use async spawn and serialize runs.",
       "addedAt": "2026-09-27"
+    },
+    {
+      "category": "general",
+      "cli": "term-mugtqj3e-2",
+      "summary": "A change was reverted: Hands-free Talk to Cadence only reacts after the word Cadence and the resident answers with context of the screen",
+      "detail": "Claimed by term-mugtqj3e-2 on 2026-09-25 (voice.ts, residentBrief.ts, service.ts). Checked 2026-09-28: apps/web/src/features/voice/residentBrief.ts no longer exists.",
+      "addedAt": "2026-09-28"
     }
   ]
 }

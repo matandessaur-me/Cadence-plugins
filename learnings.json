@@ -1765,6 +1765,13 @@
       "summary": "In-app browser: under POST /api/browser/emulate/device the screenshot is taken from the document top whatever window.scrollY is. To capture a section at an emulated width, set document.documentElement.style.transform = translateY(-<section top>px) before GET /api/browser/screenshot, then clear it. Without emulation the scroll position is respected.",
       "detail": null,
       "addedAt": "2026-09-29"
+    },
+    {
+      "category": "shell",
+      "cli": "claude",
+      "summary": "Run verification checks bare, never through a file redirect or Select-String, or the result cannot be counted",
+      "detail": "Sending check output to a temp file and reading it back with Select-String (or appending ; \"exit=$LASTEXITCODE\") makes the run uncountable: a pass there can hide a failure in a line that was never printed, and the recorded command string keeps being replayed on every subsequent turn. Re-running the individual checks bare afterwards does not clear it, because the filter is part of the recorded string. Run each check as a single bare foreground command, or chain them with && so the exit status is the conjunction. When a shell exit status genuinely cannot be read, POST /api/checks/verify {repo, wait:true} runs the repo checks and records the outcome in the turn itself.",
+      "addedAt": "2026-09-29"
     }
   ]
 }

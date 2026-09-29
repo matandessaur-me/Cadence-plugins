@@ -1779,6 +1779,13 @@
       "summary": "A change was reverted: renders no longer show a flat window pane or a pale ceiling shape from the levelling step, and a nameless product renders instead of a 500",
       "detail": "Claimed by claude on 2026-09-22 (postProcess.ts, levelingMask.ts, assembleProducts.ts, keptInventory.ts). Checked 2026-09-29: src/lib/pipeline/levelingMask.ts no longer exists.",
       "addedAt": "2026-09-29"
+    },
+    {
+      "category": "general",
+      "cli": "term-muiss92t-1",
+      "summary": "A change regressed: wave-3 voice rules hold: restarts, follow-ups, whoSaid, honest limits, humanize",
+      "detail": "Claimed by term-muiss92t-1 on 2026-09-26 (converse.ts, journal.ts, understand.ts). Checked 2026-09-29: Test failed (1): npm test. # skipped 1 # todo 0 # duration_ms 15579.3251",
+      "addedAt": "2026-09-29"
     }
   ]
 }

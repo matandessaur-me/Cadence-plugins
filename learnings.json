@@ -1772,6 +1772,13 @@
       "summary": "Run verification checks bare, never through a file redirect or Select-String, or the result cannot be counted",
       "detail": "Sending check output to a temp file and reading it back with Select-String (or appending ; \"exit=$LASTEXITCODE\") makes the run uncountable: a pass there can hide a failure in a line that was never printed, and the recorded command string keeps being replayed on every subsequent turn. Re-running the individual checks bare afterwards does not clear it, because the filter is part of the recorded string. Run each check as a single bare foreground command, or chain them with && so the exit status is the conjunction. When a shell exit status genuinely cannot be read, POST /api/checks/verify {repo, wait:true} runs the repo checks and records the outcome in the turn itself.",
       "addedAt": "2026-09-29"
+    },
+    {
+      "category": "general",
+      "cli": "claude",
+      "summary": "A change was reverted: renders no longer show a flat window pane or a pale ceiling shape from the levelling step, and a nameless product renders instead of a 500",
+      "detail": "Claimed by claude on 2026-09-22 (postProcess.ts, levelingMask.ts, assembleProducts.ts, keptInventory.ts). Checked 2026-09-29: src/lib/pipeline/levelingMask.ts no longer exists.",
+      "addedAt": "2026-09-29"
     }
   ]
 }
